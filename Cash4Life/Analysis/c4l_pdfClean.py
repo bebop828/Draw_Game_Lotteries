@@ -38,4 +38,4 @@ to_convert = ['1st', '2nd', '3rd', '4th', '5th', 'CB']
 data[to_convert] = data[to_convert].astype(int)
 
 #cleaned data to csv
-data.to_csv('CSV/c4l_updated.csv', index=False, date_format='%m/%d/%Y') #this can be titled anything you want foor the cleaned data
+data.to_csv('CSV/c4l_updated.csv', index=False, date_format='%m/%d/%Y') #this can be titled anything you want for the cleaned data
