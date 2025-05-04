@@ -1,7 +1,15 @@
-import pandas as pd 
-import re
+##################################################
+######### Cash4Life Data Clean File ##############
+##################################################
 
-data = pd.read_csv('CSV/c4l_4-23.csv', header=None, dtype=str) #just replace the csv file name if download an updated PDF version
+##################################################
+# last updated 2025/05/04
+##################################################
+
+import pandas as pd 
+import re   
+
+data = pd.read_csv('CSV/c4l_5-3.csv', header=None, dtype=str) #just replace the csv file name if download an updated PDF version
 
 #clean and organize data
 data = data[~data[0].str.contains('CASH4LIFE', na=False)]

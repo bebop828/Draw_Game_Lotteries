@@ -1,9 +1,21 @@
+########################################
+#### Cash4Life Data Convert File #######
+########################################
+
+
+########################################
+# file last updated 2025/05/04
+# pdf file is gathered from-
+# https://floridalottery.com/games/draw-games/cash4life
+########################################
+
+#imports 
 import pdfplumber 
 import csv
 
 # Paths to input PDF and output CSV
-pdf_path = r"PDF\c4l_4-23.pdf" #change this file if updated numbers pdf is downloaded
-csv_path = r"CSV\c4l_4-23.csv" #name it whatever you like
+pdf_path = r"PDF\c4l_5-3.pdf" #change this input to your file name after site pdf download
+csv_path = r"CSV\c4l_5-3.csv" 
 
 # Extract tables from PDF and write to CSV
 with pdfplumber.open(pdf_path) as pdf, open(csv_path, "w", newline="") as csv_file:
@@ -12,4 +24,4 @@ with pdfplumber.open(pdf_path) as pdf, open(csv_path, "w", newline="") as csv_fi
         tables = page.extract_tables()
         for table in tables:
             for row in table:
-                writer.writerow(row)
+                writer.writerow(row)   
