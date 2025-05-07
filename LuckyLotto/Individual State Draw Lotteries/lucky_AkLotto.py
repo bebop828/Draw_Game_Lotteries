@@ -1,14 +1,19 @@
+###########################################################################
+##################### Arkansas Draw Lotto Games ###########################
+###########################################################################
+
+###########################################################################
+# last file update- 2025/05/06
+###########################################################################
+
 import random
 
-
-
-#need to verify draw times and cut-offs.
-
+# Arkansas Game Choices
 def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.sample(range(1, 27), 1)[0]
     pb_luck = f"Powerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = f"Base ticket price $2. Cut-off time to play is 10pm ET night of drawings. Drawings are held Mon. Wed. & Sat. 10:59pm ET." 
+    pb_draw = f"Base ticket price $2. Drawings are held Mon. Wed. & Sat. 10:59pm ET." 
     pb_add = f"Available add ons- Power Play and Double Play each for $1 extra."
     pb_official = f"Official Rules and Play can be found- https://www.powerball.com Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
@@ -17,7 +22,7 @@ def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
     megaball = random.sample(range(1, 26), 1)[0]
     mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = f"Base ticket price $2. Cut-off time to play is 10pm ET night of drawings. Drawings are held Tues. Fri. 11pm ET."
+    mm_drawings = f"Base ticket price $5. Drawings are held Tues. Fri. 11pm ET."
     mm_add = f"Available add on- Megaplier $1 extra."
     mm_rules = f"Official Rules and Play can be found- https://www.megamillions.com Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
