@@ -1,9 +1,17 @@
+###########################################################################
+#################### Kentucky Draw Lotto Games ############################
+###########################################################################
+
+###########################################################################
+# last file update- 2025/05/07
+# need to have draw times confirmed 
+# Ky has Keno. Keno not written in
+###########################################################################
+
+
 import random
 
-#need to have draw times confirmed 
-#Ky has Keno. Keno not writen in
-#Cash Pop is written to produce how ever many picks user would like to play. Ky has drawings every 4 min
-
+# Kentucky Game Choices
 def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.sample(range(1, 27), 1)[0]
@@ -17,8 +25,8 @@ def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
     megaball = random.sample(range(1, 26), 1)[0]
     mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = f"Base ticket price $2. Cut-off time to play is 10pm ET night of drawings. Drawings are held Tues. Fri. 11pm ET."
-    mm_add = f"Available add on- Megaplier $1 extra."
+    mm_drawings = f"Base ticket price $5. Cut-off time to play is 10pm ET night of drawings. Drawings are held Tues. Fri. 11pm ET."
+    mm_add = f"Megaplier available with each play."
     mm_rules = f"Official Rules and Play can be found- https://www.megamillions.com Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
 

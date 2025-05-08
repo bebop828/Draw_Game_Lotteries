@@ -23,7 +23,7 @@ def mega_millions():
     megaball = random.sample(range(1, 26), 1)[0]
     mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
     mm_drawings = f"Base ticket price $5. Drawings are held Tues. Fri. 11pm ET."
-    mm_add = f"Available add on- Megaplier $1 extra."
+    mm_add = f"Megaplier available with each play."
     mm_rules = f"Official Rules and Play can be found- https://www.megamillions.com Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
 
