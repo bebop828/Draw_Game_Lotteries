@@ -3,7 +3,7 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/05/07
+# last file update- 2025/05/24
 ###########################################################################
 
 
@@ -193,7 +193,7 @@ def pick_3():
     set_1 = random.sample(range(1, 10), 1)
     set_2 = random.sample(range(1, 10), 1)   
     set_3 = random.sample(range(0, 10), 1)
-    p3_main = f"Pick 3 plus Fireball Mid-Day Lucky Numbers: {set_1, set_2, set_3}"
+    p3_main = f"Pick 3 plus Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
     p3_now = f"Now you have to decide to play these numbers Straight, Box, Straight/Box, or Combo"
     p3_drawings = f"Base ticket prices $.50 or $1. Cut-off time to play is 1:19pm ET for Mid-Day Draw and 9:34pm for Evening."
     p3_fire = f"Available add on- FIREBALL (doubles ticket amount)."   

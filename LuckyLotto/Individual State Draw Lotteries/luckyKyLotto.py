@@ -3,8 +3,7 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/05/07
-# need to have draw times confirmed 
+# last file update- 2025/05/24
 # Ky has Keno. Keno not written in
 ###########################################################################
 
@@ -16,7 +15,7 @@ def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.sample(range(1, 27), 1)[0]
     pb_luck = f"Powerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = f"Base ticket price $2. Cut-off time to play is 10pm ET night of drawings. Drawings are held Mon. Wed. & Sat. 10:59pm ET." 
+    pb_draw = f"Base ticket price $2. Drawings are held Mon. Wed. & Sat. 10:59pm ET." 
     pb_add = f"Available add ons- Power Play and Double Play each for $1 extra."
     pb_official = f"Official Rules and Play can be found- https://www.powerball.com Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
@@ -25,7 +24,7 @@ def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
     megaball = random.sample(range(1, 26), 1)[0]
     mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = f"Base ticket price $5. Cut-off time to play is 10pm ET night of drawings. Drawings are held Tues. Fri. 11pm ET."
+    mm_drawings = f"Base ticket price $5. Drawings are held Tues. Fri. 11pm ET."
     mm_add = f"Megaplier available with each play."
     mm_rules = f"Official Rules and Play can be found- https://www.megamillions.com Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
@@ -63,7 +62,7 @@ def lucky_for_life_ky():
     life_main = sorted(random.sample(range(1, 49), 5))
     lucky_ball = random.sample(range(1, 19), 1)[0]
     life_return = f"Lucky For Life Lucky Numbers: {life_main}, Lucky Ball: {lucky_ball}."
-    life_drawings = f"Base ticket price $2. Cut-off time to play is 9:30pm ET each night. Drawings are held Nightly 10:30pm ET."    
+    life_drawings = f"Base ticket price $2. Drawings are held Nightly."    
     life_rules = f"Official Rules and Play can be found- https://www.kylottery.com/apps/draw_games/luckyforlife/index.html Good Luck!"    
     return (life_return, life_drawings, life_rules)
 
@@ -141,10 +140,9 @@ def pick_4ky():
     set_4 = random.sample(range(0, 10), 1)
     p4_main = f"Pick 4 plus Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
     p4_now = f"Now you have to decide to play these numbers Straight, Box, or Straight/Box."
-    p4_drawings = f"Base ticket prices are $.50 or $1. Cut-off time to play is 1:20pm ET for Mid_Day Draw and 9:35pm ET for Evening."
-    p4_fire_mid = f"Available add on- FIREBALL (doubles ticket amount)."    
+    p4_drawings = f"Base ticket prices are $.50 or $1."       
     p4_rules = f"Official Rules and Play can be found- https://www.kylottery.com/apps/draw_games/pick4/index.html Good Luck!"
-    return (p4_main, p4_now, p4_drawings, p4_fire_mid, p4_rules)
+    return (p4_main, p4_now, p4_drawings, p4_rules)
 
 
 ky_lotto_draw_games = {

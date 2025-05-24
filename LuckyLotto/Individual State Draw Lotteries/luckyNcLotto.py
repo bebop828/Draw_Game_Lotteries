@@ -1,5 +1,11 @@
+
+
+
+
+
 import random
 
+# North Carolina
 def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.sample(range(1, 27), 1)[0]
@@ -34,50 +40,72 @@ def cash_5():
     cash_5_rules = f"Official Rules and Play can be found- https://nclottery.com/cash5-how-to-play Good Luck!"    
     return (cash_5_numbers_main, cash_5_drawings, cash_5_add, cash_5_rules)
 
-def pick_4_day():
+
+def pick_4():
+    while True: 
+        print("Select a game time to play:")
+        print("1. Day Draw")
+        print("2. Night Draw")
+
+        try:
+            choice = int(input("Make selection and enter either 1 or 2: ").strip())
+        except ValueError:
+            print("Invalid input. Please enter either 1 or 2")
+            continue
+
+        game_time_mapping = {
+            1: 'Day Draw',
+            2: 'Night Draw'
+        }    
+
+        if choice not in game_time_mapping:
+            print("Invalid selection. Please choose 1 or 2")
+            continue
+
+        game_time = game_time_mapping[choice]
+        break
     set_1 = random.sample(range(0, 10), 1)
-    set_2 = random.sample(range(0, 10), 1)
+    set_2 = random.sample(range(0, 10), 1)   
     set_3 = random.sample(range(0, 10), 1)
     set_4 = random.sample(range(0, 10), 1)
-    p4_main = f"Pick 4 Day Draw plus Fireball Lucky Numbers: {set_1, set_2, set_3, set_4}"
-    p4_now = f"Now you have to decide to play these numbers Exact, Any Order, 50/50 (Exact/Any), Combo, or Pairs."
-    p4_drawings = f"Base ticket prices are $.50 or $1. Cut-off time to play is 2:45pm ET each afternoon. Day Drawings held 3pm ET everyday."
-    p4_fire_mid = f"Available add on- FIREBALL (doubles the ticket price)."    
-    p4_rules = f"Official Rules and Play can be found- https://nclottery.com/pick4-how-to-play Good Luck!"
-    return (p4_main, p4_now, p4_drawings, p4_fire_mid, p4_rules)
+    p4_main = f"Pick 4 plus Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
+    p4_now = f"Now you have to decide to play these numbers Exact, Any Order, 50/50, Pairs (Front/Back), or Combo"
+    p4_drawings = f"Base ticket prices $.50 or $1. Drawings held Everyday!"
+    p4_fire = f"Available add on- FIREBALL (doubles ticket amount)."   
+    p4_rules = f"Official Rules and Play can be found- https://nclottery.com/pick4 Good Luck!"    
+    return (p4_main, p4_now, p4_drawings, p4_fire, p4_rules)
 
-def pick_4_night():
-    set_1 = random.sample(range(0, 10), 1)
-    set_2 = random.sample(range(0, 10), 1)
-    set_3 = random.sample(range(0, 10), 1)
-    set_4 = random.sample(range(0, 10), 1)
-    p4_main = f"Pick 4 Night Draw plus Fireball Lucky Numbers: {set_1, set_2, set_3, set_4}"
-    p4_now = f"Now you have to decide to play these numbers Exact, Any Order, 50/50 (Exact/Any), Combo, or Pairs."
-    p4_drawings = f"Base ticket prices are $.50 or $1. Cut-off time to play is 10:58pm ET daily. Night Drawings held 11:22pm ET everyday."
-    p4_fire_mid = f"Available add on- FIREBALL (doubles the ticket price)."    
-    p4_rules = f"Official Rules and Play can be found- https://nclottery.com/pick4-how-to-play Good Luck!"
-    return (p4_main, p4_now, p4_drawings, p4_fire_mid, p4_rules)
+def pick_3():
+    while True: 
+        print("Select a game time to play:")
+        print("1. Day Draw")
+        print("2. Night Draw")
 
-def pick_3_day():
-    set_1 = random.sample(range(0, 10), 1)
-    set_2 = random.sample(range(0, 10), 1)
-    set_3 = random.sample(range(0, 10), 1)
-    p3_main = f"Pick 3 Day Draw plus Fireball Lucky Numbers: {set_1, set_2, set_3}"
-    p3_now = f"Now you have to decide to play these numbers Exact, Any Order, 50/50 (Exact/Any), Combo, or Pairs."
-    p3_drawings = f"Base ticket prices are $.50 or $1. Cut-off time to play is 2:45pm ET each afternoon. Day Drawings are 3pm ET daily."
-    p3_fire = f"Available add on- FIREBALL (doubles the ticket price)."   
-    p3_rules = f"Official Rules and Play can be found- https://nclottery.com/pick3-how-to-play Good Luck!"    
-    return (p3_main, p3_now, p3_drawings, p3_fire, p3_rules)
+        try:
+            choice = int(input("Make selection and enter either 1 or 2: ").strip())
+        except ValueError:
+            print("Invalid input. Please enter either 1 or 2")
+            continue
 
-def pick_3_night():
+        game_time_mapping = {
+            1: 'Day Draw',
+            2: 'Night Draw'
+        }    
+
+        if choice not in game_time_mapping:
+            print("Invalid selection. Please choose 1 or 2")
+            continue
+
+        game_time = game_time_mapping[choice]
+        break
     set_1 = random.sample(range(0, 10), 1)
-    set_2 = random.sample(range(0, 10), 1)
+    set_2 = random.sample(range(0, 10), 1)   
     set_3 = random.sample(range(0, 10), 1)
-    p3_main = f"Pick 3 Night Draw plus Fireball Lucky Numbers: {set_1, set_2, set_3}"
-    p3_now = f"Now you have to decide to play these numbers Exact, Any Order, 50/50 (Exact/Any), Combo, or Pairs."
-    p3_drawings = f"Base ticket prices are $.50 or $1. Cut-off time to play is 10:58pm ET each night. Drawings are held every night at 11:22pm ET."
-    p3_fire = f"Available add on- FIREBALL (doubles the ticket price)."   
-    p3_rules = f"Official Rules and Play can be found- https://nclottery.com/pick3-how-to-play Good Luck!"    
+    p3_main = f"Pick 3 plus Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
+    p3_now = f"Now you have to decide to play these numbers Exact, Any Order, 50/50, Pairs (Front/Back), or Combo"
+    p3_drawings = f"Base ticket prices $.50 or $1. Drawings held Everyday!"
+    p3_fire = f"Available add on- FIREBALL (doubles ticket amount)."   
+    p3_rules = f"Official Rules and Play can be found- https://nclottery.com/pick3 Good Luck!"    
     return (p3_main, p3_now, p3_drawings, p3_fire, p3_rules)
 
 nc_lotto_draw_games = {
@@ -85,10 +113,9 @@ nc_lotto_draw_games = {
     2: mega_millions,
     3: lucky_for_life_nc,
     4: cash_5,
-    5: pick_4_day,
-    6: pick_4_night,
-    7: pick_3_day,
-    8: pick_3_night,
+    5: pick_4,
+    6: pick_3
+    
 }
 
 def play_game():
@@ -97,10 +124,9 @@ def play_game():
     print("2. Mega Millions")
     print("3. Lucky For Life")
     print("4. Cash 5 Double Play")
-    print("5. Pick 4 Day Draw")
-    print("6. Pick 4 Night Draw")
-    print("7. Pick 3 Day Draw")
-    print("8. Pick 3 Night Draw")
+    print("5. Pick 4")
+    print("6. Pick 3")
+    
 
     while True:
         try:
