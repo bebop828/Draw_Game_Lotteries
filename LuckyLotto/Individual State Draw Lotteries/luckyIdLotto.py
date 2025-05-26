@@ -213,18 +213,16 @@ def play_game():
             if id_lotto_game_choice in id_lotto_draw_games:                        
                 result = id_lotto_draw_games[id_lotto_game_choice]()
 
-                if isinstance(result, list):                            
-                    # This handles option 9: a list of tuples (game name, numbers)
+                if isinstance(result, list):                    
                     for res in result:
                         if isinstance(res, tuple) and len(res) == 2:
                             print(f"{res[0]} — {res[1]}")
                         else:
                             print(res)
-                else:
-                    # This handles standard game result: a tuple of strings
+                else:                    
                     for item in result:
                         print(item)
-                break  # End the loop after successful game play
+                break 
             else:
                 print("Not a valid option. Please try again.")
         except ValueError:  
