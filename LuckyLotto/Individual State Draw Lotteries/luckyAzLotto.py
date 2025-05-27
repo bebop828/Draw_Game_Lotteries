@@ -63,12 +63,12 @@ def pick3():
 # summary for each game
 def powerball_summary():
     main = sorted(random.sample(range(1, 70), 5))
-    rb = random.sample(range(1, 27), 1)[0]
+    rb = random.randint(1, 26)
     return ("Powerball", f"Numbers: {main}, Powerball: {rb}")
 
 def mega_summary():
     main_mm = sorted(random.sample(range(1, 71), 5))
-    mb = random.sample(range(1, 26), 1)[0]
+    mb = random.randint(1, 25)
     return ("Mega Millions", f"Numbers: {main_mm}, Mega Ball: {mb}")
 
 def the_pick_summary():
@@ -108,7 +108,7 @@ az_lotto_draw_games = {
     4: triple_twist,
     5: fantasy5,
     6: pick3,
-    7: lambda: az_lotto_draw_games[random.randint(1, 8)](),
+    7: lambda: az_lotto_draw_games[random.randint(1, 6)](),
     8: lambda: [func() for func in summary_lotto_draw_games.values()]
 }
 

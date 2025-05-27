@@ -3,7 +3,7 @@
 ###################################################################
 
 ###################################################################
-# last file update- 2025/05/25
+# last file update- 2025/05/26
 # Delaware has Keno Draw Game. 
 # Keno not included currently with file. Will update another date
 ###################################################################
@@ -164,12 +164,12 @@ def play5():
 # summary for each game
 def powerball_summary():
     main = sorted(random.sample(range(1, 70), 5))
-    rb = random.sample(range(1, 27), 1)[0]
+    rb = random.randint(1, 26)
     return ("Powerball", f"Numbers: {main}, Powerball: {rb}")
 
 def mega_summary():
     main_mm = sorted(random.sample(range(1, 71), 5))
-    mb = random.sample(range(1, 26), 1)[0]
+    mb = random.randint(1, 25)
     return ("Mega Millions", f"Numbers: {main_mm}, Mega Ball: {mb}")
 
 def lotto_summary():
@@ -202,13 +202,13 @@ def play4_summary():
     return ("Play 4", f"{draw_time4}: Numbers: ({set_1}, {set_2}, {set_3}, {set_4})")
 
 def play5_summary(): 
-    draw_time4 = random.choice(["Day", "Night"])
+    draw_time5 = random.choice(["Day", "Night"])
     set_1 = random.randint(0, 9)
     set_2 = random.randint(0, 9)
     set_3 = random.randint(0, 9)
     set_4 = random.randint(0, 9)
     set_5 = random.randint(0, 9)
-    return ("Play 5", f"{draw_time4}: Numbers: ({set_1}, {set_2}, {set_3}, {set_4}, {set_5})")
+    return ("Play 5", f"{draw_time5}: Numbers: ({set_1}, {set_2}, {set_3}, {set_4}, {set_5})")
 
 
 #summaries
