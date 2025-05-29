@@ -3,7 +3,7 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/05/24
+# last file update- 2025/05/28
 ###########################################################################
 
 
@@ -12,31 +12,31 @@ import random
 # Florida Game Choices
 def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
-    pb_rb = random.sample(range(1, 27), 1)[0]
+    pb_rb = random.randint(1, 26)
     pb_luck = f"Powerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
     pb_draw = f"Base ticket price $2. Cut-off time to play is 10pm ET night of drawings. Drawings are held Mon. Wed. & Sat. 10:59pm ET." 
     pb_add = f"Available add ons- Power Play and Double Play each for $1 extra."
-    pb_official = f"Official Rules and Play can be found- https://www.powerball.com Good Luck!"    
+    pb_official = f"Official Rules and Play can be found- https://floridalottery.com/games/draw-games/powerball Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
-
-
-def cash_4_life_fl():
-    cash_main = sorted(random.sample(range(1, 61), 5))
-    cash_ball = random.sample(range(1, 5), 1)[0]
-    numbers_main = f"Cash 4 Life Lucky Numbers: {cash_main}, Cash Ball: {cash_ball}."
-    drawings_c4l = f"Base ticket price $2. Cut-off time to play is 8:30pm ET each night. Drawings are held Nightly 9pm ET."    
-    rules_c4l = f"Official Rules and Play can be found- https://floridalottery.com/games/draw-games/cash4life Good Luck!"    
-    return (numbers_main, drawings_c4l, rules_c4l)
 
 
 def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
-    megaball = random.sample(range(1, 26), 1)[0]
+    megaball = random.randint(1, 25)
     mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
     mm_drawings = f"Base ticket price $5. Cut-off time to play is 10pm ET night of drawings. Drawings are held Tues. Fri. 11pm ET."
     mm_add = f"Megaplier available with every play."
-    mm_rules = f"Official Rules and Play can be found- https://www.megamillions.com Good Luck!"    
+    mm_rules = f"Official Rules and Play can be found- https://floridalottery.com/games/draw-games/mega-millions Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
+
+
+def cash_4_life_fl():
+    cash_main = sorted(random.sample(range(1, 61), 5))
+    cash_ball = random.randint(1, 4)
+    numbers_main = f"Cash 4 Life Lucky Numbers: {cash_main}, Cash Ball: {cash_ball}."
+    drawings_c4l = f"Base ticket price $2. Cut-off time to play is 8:30pm ET each night. Drawings are held Nightly 9pm ET."    
+    rules_c4l = f"Official Rules and Play can be found- https://floridalottery.com/games/draw-games/cash4life Good Luck!"    
+    return (numbers_main, drawings_c4l, rules_c4l)
 
 
 def florida_lotto_x():
@@ -70,8 +70,8 @@ def fantasy_5():
             continue
 
         game_time_mapping = {
-            1: 'Mid-Day- 1:05pm ET Draw',
-            2: 'Evening- 11:15pm ET Draw'
+            1: 'Mid-Day Draw',
+            2: 'Evening Draw'
         }    
 
         if choice not in game_time_mapping:
@@ -113,11 +113,11 @@ def cash_pop():
             continue
 
         game_time_mapping = {
-            1: 'Morning- 8:45am ET Draw',
-            2: 'Matinee- 11:45pm ET Draw',
-            3: 'Afternoon 2:45pm ET Draw',
-            4: 'Evening 6:45pm ET Draw',
-            5: 'Late Night 11:45pm ET Draw'
+            1: 'Morning Draw',
+            2: 'Matinee Draw',
+            3: 'Afternoon Draw',
+            4: 'Evening Draw',
+            5: 'Late Night Draw'
         }    
 
         if choice not in game_time_mapping:
@@ -147,8 +147,8 @@ def pick_2():
             continue
 
         game_time_mapping = {
-            1: 'Mid-Day- 1:30pm ET Draw',
-            2: 'Evening- 9:45pm ET Draw'
+            1: 'Mid-Day Draw',
+            2: 'Evening Draw'
         }    
 
         if choice not in game_time_mapping:
@@ -157,8 +157,8 @@ def pick_2():
 
         game_time = game_time_mapping[choice]
         break
-    set_1 = random.sample(range(1, 10), 1)
-    set_2 = random.sample(range(1, 10), 1)   
+    set_1 = random.randint(0, 9)
+    set_2 = random.randint(0, 9)  
     pick2_main = f"Lucky Pick 2 plus FIREBALL Numbers for {game_time}: {set_1, set_2}"
     pick_2_now = f"Now you have to decide to play these numbers Straight, Box, Straight/Box, or Front/Back"
     pick2_drawings = f"Base ticket price $.50 or $1. Cut-off time to play is 1:17pm ET Mid-day drawings and 9:32pm ET for evening."
@@ -180,8 +180,8 @@ def pick_3():
             continue
 
         game_time_mapping = {
-            1: 'Mid-Day- 1:30pm ET Draw',
-            2: 'Evening- 9:45pm ET Draw'
+            1: 'Mid-Day Draw',
+            2: 'Evening Draw'
         }    
 
         if choice not in game_time_mapping:
@@ -190,9 +190,9 @@ def pick_3():
 
         game_time = game_time_mapping[choice]
         break
-    set_1 = random.sample(range(1, 10), 1)
-    set_2 = random.sample(range(1, 10), 1)   
-    set_3 = random.sample(range(0, 10), 1)
+    set_1 = random.randint(0, 9)
+    set_2 = random.randint(0, 9)   
+    set_3 = random.randint(0, 9)
     p3_main = f"Pick 3 plus Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
     p3_now = f"Now you have to decide to play these numbers Straight, Box, Straight/Box, or Combo"
     p3_drawings = f"Base ticket prices $.50 or $1. Cut-off time to play is 1:19pm ET for Mid-Day Draw and 9:34pm for Evening."
@@ -214,8 +214,8 @@ def pick_4():
             continue
 
         game_time_mapping = {
-            1: 'Mid-Day- 1:30pm ET Draw',
-            2: 'Evening- 9:45pm ET Draw'
+            1: 'Mid-Day Draw',
+            2: 'Evening Draw'
         }    
 
         if choice not in game_time_mapping:
@@ -224,10 +224,10 @@ def pick_4():
 
         game_time = game_time_mapping[choice]
         break
-    set_1 = random.sample(range(1, 10), 1)
-    set_2 = random.sample(range(1, 10), 1)   
-    set_3 = random.sample(range(0, 10), 1)
-    set_4 = random.sample(range(0, 10), 1)
+    set_1 = random.randint(0, 9)
+    set_2 = random.randint(0, 9)   
+    set_3 = random.randint(0, 9)
+    set_4 = random.randint(0, 9)
     p4_main = f"Pick 4 plus Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
     p4_now = f"Now you have to decide to play these numbers Straight, Box, Straight/Box, or Combo."
     p4_drawings = f"Base ticket prices are $.50 or $1. Cut-off time to play is 1:20pm ET for Mid_Day Draw and 9:35pm ET for Evening."
@@ -249,8 +249,8 @@ def pick_5():
             continue
 
         game_time_mapping = {
-            1: 'Mid-Day- 1:30pm ET Draw',
-            2: 'Evening- 9:45pm ET Draw'
+            1: 'Mid-Day Draw',
+            2: 'Evening Draw'
         }    
 
         if choice not in game_time_mapping:
@@ -259,12 +259,12 @@ def pick_5():
 
         game_time = game_time_mapping[choice]
         break
-    set_1 = random.sample(range(1, 10), 1)
-    set_2 = random.sample(range(1, 10), 1)   
-    set_3 = random.sample(range(0, 10), 1)
-    set_4 = random.sample(range(0, 10), 1)
-    set_5 = random.sample(range(0, 10), 1)
-    p5_main = f"Pick 5 with Fireball for {game_time}: {set_1, set_2, set_3, set_4, set_5}"
+    set_1 = random.randint(0, 9)
+    set_2 = random.randint(0, 9)   
+    set_3 = random.randint(0, 9)
+    set_4 = random.randint(0, 9)
+    set_5 = random.randint(0, 9)
+    p5_main = f"Pick 5 with Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4, set_5}"
     p5_now = f"Now you have to decide to play these numbers Straight, Box, Straight/Box, or Combo."
     p5_drawings = f"Base ticket prices are $.50 or $1. Cut-off time to play is 1:18pm ET for Mid_Day Draw and 9:33pm ET for Evening."
     p5_fire = f"Available add on- FIREBALL (doubles ticket amount)."    
@@ -272,11 +272,91 @@ def pick_5():
     return (p5_main, p5_now, p5_drawings, p5_fire, p5_rules)
 
 
+# summary for each game
+def powerball_summary():
+    main = sorted(random.sample(range(1, 70), 5))
+    rb = random.randint(1, 26)
+    return ("Powerball", f"Numbers: {main}, Powerball: {rb}")
 
+def mega_summary():
+    main_mm = sorted(random.sample(range(1, 71), 5))
+    mb = random.randint(1, 25)
+    return ("Mega Millions", f"Numbers: {main_mm}, Mega Ball: {mb}")
+
+def cash_4_life_fl_summary():
+    cash_main = sorted(random.sample(range(1, 61), 5))
+    cash_ball = random.randint(1, 4)
+    return ("Cash 4 Life", f"Numbers: {cash_main}, Cash Ball: {cash_ball}")
+
+def florida_lotto_x_summary():
+    main = sorted(random.sample(range(1, 54), 6))
+    return ("Florida Lotto X", f"Numbers: {main}")
+
+def jackpot_triple_play_summary():
+    jackpot = sorted(random.sample(range(1, 47), 6))
+    return ("Jackpot Triple Play with Combo", f"Numbers: {jackpot}")
+
+def fantasy5_summary(): 
+    draw_time5 = random.choice(["Mid-Day", "Evening"])
+    fantasy = sorted(random.sample(range(1, 37), 5)) 
+    return ("Fantasy 5", f"{draw_time5}: Numbers: {fantasy}")
+
+def cash_pop_summary(): 
+    draw_time_pop = random.choice(["Morning", "Matinee", "Afternoon", "Evening", "Late Night"])
+    pop = random.randint(1, 15)
+    return ("Cash Pop (Single Number)", f"{draw_time_pop}: Numbers: {pop} ")
+
+def pick2_summary(): 
+    draw_time = random.choice(["Mid-Day", "Evening"])    
+    set_1 = random.randint(0, 9)
+    set_2 = random.randint(0, 9)
+    return ("Pick 2 with Fireball", f"{draw_time}: Numbers: {set_1}, {set_2}")
+
+def pick3_summary():    
+    draw_time = random.choice(["Mid-Day", "Evening"])    
+    set_1 = random.randint(0, 9)
+    set_2 = random.randint(0, 9)
+    set_3 = random.randint(0, 9)
+    return ("Pick 3 with Fireball", f"{draw_time}: Numbers: {set_1}, {set_2}, {set_3}")
+
+def pick4_summary(): 
+    draw_time4 = random.choice(["Mid-Day", "Evening"])
+    set_1 = random.randint(0, 9)
+    set_2 = random.randint(0, 9)
+    set_3 = random.randint(0, 9)
+    set_4 = random.randint(0, 9)
+    return ("Pick 4 with Fireball", f"{draw_time4}: Numbers: {set_1}, {set_2}, {set_3}, {set_4}")
+
+def pick5_summary(): 
+    draw_time5 = random.choice(["Mid-Day", "Evening"])
+    set_1 = random.randint(0, 9)
+    set_2 = random.randint(0, 9)
+    set_3 = random.randint(0, 9)
+    set_4 = random.randint(0, 9)
+    set_5 = random.randint(0, 9)
+    return ("Pick 5 with Fireball", f"{draw_time5}: Numbers: {set_1}, {set_2}, {set_3}, {set_4}, {set_5}")
+
+#summaries
+summary_lotto_draw_games = {
+    "Powerball": powerball_summary,
+    "Mega Millions": mega_summary,
+    "Cash 4 Life": cash_4_life_fl_summary,
+    "Florida Lotto X": florida_lotto_x_summary,
+    "Jackpot Triple Play with Combo": jackpot_triple_play_summary,
+    "Fantasy 5": fantasy5_summary,
+    "Cash Pop (Single Number)": cash_4_life_fl_summary,
+    "Pick 2 with Fireball": pick2_summary,
+    "Pick 3 with Fireball": pick3_summary,
+    "Pick 4 with Fireball": pick4_summary,
+    "Pick 5 with Fireball": pick5_summary
+}
+
+
+# Florida Game Choices
 fl_lotto_draw_games = {
-    1: powerball,
-    2: cash_4_life_fl,
-    3: mega_millions,
+    1: powerball, 
+    2: mega_millions,
+    3: cash_4_life_fl,
     4: florida_lotto_x,
     5: jackpot_triple_play,
     6: fantasy_5,
@@ -284,14 +364,17 @@ fl_lotto_draw_games = {
     8: pick_2,    
     9: pick_3,    
     10: pick_4,    
-    11: pick_5    
+    11: pick_5,
+    12: lambda: fl_lotto_draw_games[random.randint(1, 11)](),
+    13: lambda: [func() for func in summary_lotto_draw_games.values()]    
 }
 
+# print the menu
 def play_game():
     print("Florida Lotto Game Choices:")
     print("1. Powerball")
-    print("2. Cash 4 Life")
-    print("3. Mega Millions")
+    print("2. Mega Millions")
+    print("3. Cash 4 Life")
     print("4. Florida Lotto X")
     print("5. Jackpot Triple Play")
     print("6. Fantasy 5")
@@ -299,15 +382,27 @@ def play_game():
     print("8. Pick 2")    
     print("9. Pick 3")    
     print("10. Pick 4")    
-    print("11. Pick 5")   
+    print("11. Pick 5")
+    print("12. Can't Decide? Try Random Game!!!")
+    print("13. How About Quick Pick All 11 Games")   
 
 
+    #waiter
     while True:
         try:
             fl_lotto_game_choice = int(input("Which Lucky Game would you like to try: "))
-            if fl_lotto_game_choice in fl_lotto_draw_games:
-                for result in fl_lotto_draw_games[fl_lotto_game_choice]():
-                    print(result)
+            if fl_lotto_game_choice in fl_lotto_draw_games:                        
+                result = fl_lotto_draw_games[fl_lotto_game_choice]()
+
+                if isinstance(result, list):
+                    for res in result:
+                        if isinstance(res, tuple) and len(res) == 2:
+                            print(f"{res[0]} — {res[1]}")
+                        else:
+                            print(res)
+                else:                    
+                    for item in result:
+                        print(item)
                 break  
             else:
                 print("Not a valid option. Please try again.")
@@ -316,6 +411,7 @@ def play_game():
 
     print("Curious if your numbers have been drawn before? Visit https://floridalottery.com/games/winning-numbers/history and look for yourself!!!")
 
+#cook
 def main():
     while True:
         play_game()
