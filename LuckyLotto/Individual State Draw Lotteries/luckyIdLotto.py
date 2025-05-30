@@ -4,11 +4,11 @@
 
 ###################################################################
 # last file update- 2025/05/25
-###################################################################
+################################################################### 
 
 
 import random
-
+ 
 #Idaho Game Choices
 def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
@@ -35,8 +35,8 @@ def lotto_america():
     lotto_num = sorted(random.sample(range(1, 53), 5))
     star_ball = random.randint(1, 10)
     lotto_main = f"Lotto America with All-Star Ball Lucky Numbers: {lotto_num}, Star Ball: {star_ball}"
-    lotto_draw = f"Ticket price $1. Cut off time 9:45pm ET. Drawings are held Mon, Wed, Sat 11pm ET"
-    lotto_add = f"Add-on- All-Star Multiplier available for $1 extra"
+    lotto_draw = f"Ticket price $1. Drawings are held Mon, Wed, Sat 9pm MT"
+    lotto_add = f"Add on- All-Star Multiplier available for $1 extra"
     lotto_rules = f"Official Rules and Play can be found- https://www.idaholottery.com/games/draw/lotto-america Good Luck!"
     return (lotto_main, lotto_draw, lotto_add, lotto_rules)
 
@@ -131,22 +131,22 @@ def pick4():
 # Summary For Each Game 
 def powerball_summary():
     main = sorted(random.sample(range(1, 70), 5))
-    rb = random.sample(range(1, 27), 1)[0]
+    rb = random.randint(1, 26)
     return ("Powerball", f"Numbers: {main}, Powerball: {rb}")
 
 def mega_summary():
     main_mm = sorted(random.sample(range(1, 71), 5))
-    mb = random.sample(range(1, 26), 1)[0]
+    mb = random.randint(1, 25)
     return ("Mega Millions", f"Numbers: {main_mm}, Mega Ball: {mb}")
 
 def lotto_summary():
     lotto_main = sorted(random.sample(range(1, 53), 5))
-    lotto_star = random.sample(range(1, 11), 1)[0]
+    lotto_star = random.randint(1, 10)
     return ("Lotto America", f"Numbers: {lotto_main}, Star Ball: {lotto_star}")
 
 def lucky_summary():
     life_num = sorted(random.sample(range(1, 49), 5))
-    life_ball = random.sample(range(1, 19),1)[0]
+    life_ball = random.randint(1, 18)
     return ("Lucky for Life", f"Numbers: {life_num}, Lucky Ball: {life_ball}")
 
 def idaho_summary(): 
@@ -243,6 +243,4 @@ def main():
                 print("That is not an acceptable response. Please try again.")
 
 if __name__ == "__main__":
-    main()
-    
-    
+    main()   
