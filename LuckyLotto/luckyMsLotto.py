@@ -3,34 +3,35 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/05/24
+# last file update- 2025/06/01
 ###########################################################################
+
 
 import random
 
-# Mississippi Game Choices
+# Mississippi Games Choices
 def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
-    pb_rb = random.sample(range(1, 27), 1)[0]
+    pb_rb = random.randint(1, 26)
     pb_luck = f"Powerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = f"Base ticket price $2. Cut-off time to play is 10pm ET night of drawings. Drawings are held Mon. Wed. & Sat. 10:59pm ET." 
+    pb_draw = f"Base ticket price $2. Drawings are held Mon. Wed. & Sat. 9:59pm CT." 
     pb_add = f"Available add ons- Power Play and Double Play each for $1 extra."
-    pb_official = f"Official Rules and Play can be found- https://www.powerball.com Good Luck!"    
+    pb_official = f"Official Rules and Play can be found- https://www.mslottery.com/games/powerball/ Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
 
 def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
-    megaball = random.sample(range(1, 26), 1)[0]
+    megaball = random.randint(1, 25)
     mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = f"Base ticket price $2. Cut-off time to play is 10pm ET night of drawings. Drawings are held Tues. Fri. 11pm ET."
-    mm_add = f"Available add on- Megaplier $1 extra."
+    mm_drawings = f"Base ticket price $5. Drawings are held Tues. Fri. 10pm CT."
+    mm_add = f"Megaplier available with every play."
     mm_rules = f"Official Rules and Play can be found- https://www.megamillions.com Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
 
 
 def lotto_america(): 
     lotto_main = sorted(random.sample(range(1, 53), 5))
-    star_ball = random.sample(range(1, 11), 1)[0]
+    star_ball = random.randint(1, 10)
     lotto_num = f"Lucky Lotto America with EZ-Match Numbers: {lotto_main}, Star Ball: {star_ball}."
     lotto_drawings = f"Base ticket price $1. Drawings are held Mon. Wed. and Sat. 9:15pm CT"    
     lotto_add = f"Available add on games- EZ-Match and All Star Bonus $1 extra each per play"
@@ -49,8 +50,8 @@ def match_5multi():
 def cash_4():
     while True: 
         print("Select a game time to play:")
-        print("1. Mid-Day 2:30pm CT Draw")
-        print("2. Evening 9:30pm CT Draw")
+        print("1. Mid-Day 3pm CT Draw")
+        print("2. Evening 10pm CT Draw")
         
         try:
             choice = int(input("Make selection and enter (1-3): ").strip())
@@ -59,8 +60,8 @@ def cash_4():
             continue
 
         game_time_mapping = {
-            1: 'Mid-Day- 2:30pm CT Draw',
-            2: 'Evening- 9:30pm CT Draw'            
+            1: 'Mid-Day Draw',
+            2: 'Evening Draw'            
         }    
 
         if choice not in game_time_mapping:
@@ -70,12 +71,12 @@ def cash_4():
         game_time = game_time_mapping[choice]
         break
 
-    set_1 = random.sample(range(0, 10), 1)
-    set_2 = random.sample(range(0, 10), 1) 
-    set_3 = random.sample(range(0, 10), 1)
-    set_4 = random.sample(range(0, 10), 1)
+    set_1 = random.randint(0, 9)
+    set_2 = random.randint(0, 9) 
+    set_3 = random.randint(0, 9)
+    set_4 = random.randint(0, 9)
     c4_main = f"Cash 4 with Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
-    c4_now = f"Now you have to decide to play these numbers Exact, Any, Exact/ Any, or Combo."
+    c4_now = f"Now you have to decide to play these numbers Exact, Any, Exact/Any, or Combo."
     c4_drawings = f"Base ticket prices are $.50 or $1."      
     c4_add = f"Available add on- FIREBALL (doubles the ticket price)"
     c4_rules = f"Official Rules and Play can be found- https://www.mslottery.com/games/cash-4/ Good Luck!"    
@@ -85,8 +86,8 @@ def cash_4():
 def cash_3():
     while True: 
         print("Select a game time to play:")
-        print("1. Mid-Day 2:30pm CT Draw")
-        print("2. Evening 9:30pm CT Draw")
+        print("1. Mid-Day 3pm CT Draw")
+        print("2. Evening 10pm CT Draw")
         
         try:
             choice = int(input("Make selection and enter (1-3): ").strip())
@@ -95,8 +96,8 @@ def cash_3():
             continue
 
         game_time_mapping = {
-            1: 'Mid-Day- 2:30pm CT Draw',
-            2: 'Evening- 9:30pm CT Draw'            
+            1: 'Mid-Day Draw',
+            2: 'Evening Draw'            
         }    
 
         if choice not in game_time_mapping:
@@ -106,18 +107,64 @@ def cash_3():
         game_time = game_time_mapping[choice]
         break
 
-    set_1 = random.sample(range(0, 10), 1)
-    set_2 = random.sample(range(0, 10), 1) 
-    set_3 = random.sample(range(0, 10), 1)
+    set_1 = random.randint(0, 9)
+    set_2 = random.randint(0, 9) 
+    set_3 = random.randint(0, 9)
     c3_main = f"Cash 3 with Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
-    c3_now = f"Now you have to decide to play these numbers Exact, Any, Exact/ Any, or Combo."
+    c3_now = f"Now you have to decide to play these numbers Exact, Any, Exact/Any, or Combo."
     c3_drawings = f"Base ticket prices are $.50 or $1."      
     c3_add = f"Available add on- FIREBALL (doubles the ticket price)"
     c3_rules = f"Official Rules and Play can be found-https://www.mslottery.com/games/cash-3/ Good Luck!"    
     return (c3_main, c3_now, c3_drawings, c3_add, c3_rules)
 
 
+# summary for each game
+def powerball_summary():
+    main = sorted(random.sample(range(1, 70), 5))
+    rb = random.randint(1, 26)
+    return ("Powerball", f"Numbers: {main}, Powerball: {rb}")
 
+def mega_summary():
+    main_mm = sorted(random.sample(range(1, 71), 5))
+    mb = random.randint(1, 25)
+    return ("Mega Millions", f"Numbers: {main_mm}, Mega Ball: {mb}")
+
+def lotto_america_summary(): 
+    lotto_main = sorted(random.sample(range(1, 53), 5))
+    star_ball = random.randint(1, 10)
+    return ("Lotto America", f"Numbers: {lotto_main}, Star Ball: {star_ball}")
+
+def match_5multi_summary(): 
+    match_main = sorted(random.sample(range(1, 38), 5))
+    return ("Match 5 with Multiplier", f"Numbers: {match_main}")
+
+def cash4_summary(): 
+    draw_time4 = random.choice(["Mid-Day", "Evening"])
+    set_1 = random.randint(0, 9)
+    set_2 = random.randint(0, 9)
+    set_3 = random.randint(0, 9)
+    set_4 = random.randint(0, 9)
+    return ("Cash 4 with Fireball", f"{draw_time4}: Numbers: {set_1}, {set_2}, {set_3}, {set_4}")
+
+def cash3_summary():    
+    draw_time = random.choice(["Mid-Day", "Evening"])    
+    set_1 = random.randint(0, 9)
+    set_2 = random.randint(0, 9)
+    set_3 = random.randint(0, 9)
+    return ("Cash 3 with Fireball", f"{draw_time}: Numbers: {set_1}, {set_2}, {set_3}")
+
+#summaries
+summary_lotto_draw_games = {
+    "Powerball": powerball_summary,
+    "Mega Millions": mega_summary,
+    "Lotto America": lotto_america_summary,
+    "Match 5 with Multiplier": match_5multi_summary,
+    "Cash 4 with Fireball": cash4_summary,
+    "Cash 3 with Fireball": cash3_summary
+}
+
+
+# Mississippi Game Choices
 ms_lotto_draw_games = {
     1: powerball,
     2: mega_millions,
@@ -125,9 +172,12 @@ ms_lotto_draw_games = {
     4: match_5multi,
     5: cash_4,
     6: cash_3,
-
+    7: lambda: ms_lotto_draw_games[random.randint(1, 6)](),
+    8: lambda: [func() for func in summary_lotto_draw_games.values()]
 }
 
+
+# print the menu
 def play_game():
     print("Mississippi Lotto Game Choices")
     print("1. Powerball")
@@ -136,24 +186,32 @@ def play_game():
     print("4. Match 5 with Multiplier")
     print("5. Cash 4 with FIREBALL")
     print("6. Cash 3 with FIREBALL")
-
-
-
-
+    print("7. Can't Decide? Try Random Game!!!")
+    print("8. How About Quick Pick All 6 Games")
+        
+    #waiter
     while True:
         try:
             ms_lotto_game_choice = int(input("Which Lucky Game would you like to try: "))
-            if ms_lotto_game_choice in ms_lotto_draw_games:
-                for result in ms_lotto_draw_games[ms_lotto_game_choice]():
-                    print(result)
-                break 
+            if ms_lotto_game_choice in ms_lotto_draw_games:                        
+                result = ms_lotto_draw_games[ms_lotto_game_choice]()
+
+                if isinstance(result, list):
+                    for res in result:
+                        if isinstance(res, tuple) and len(res) == 2:
+                            print(f"{res[0]} — {res[1]}")
+                        else:
+                            print(res)
+                else:                    
+                    for item in result:
+                        print(item)
+                break  
             else:
                 print("Not a valid option. Please try again.")
         except ValueError:  
             print("Not a valid option. Please try again.")
 
-   
-
+# cook
 def main():
     while True:
         play_game()
