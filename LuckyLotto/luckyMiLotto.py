@@ -3,7 +3,7 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/06/30
+# last file update- 2025/07/11
 # Michigan has Keno and Cash Pop. These games to be coded later.
 ###########################################################################
 
@@ -13,8 +13,8 @@ import random
 def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.randint(1, 26)
-    pb_luck = f"Powerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = "Base ticket price $2. Drawings are held Mon. Wed. & Sat." 
+    pb_luck = f"\nPowerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
+    pb_draw = "Ticket price to play $2. Drawings are held Mon. Wed. & Sat." 
     pb_add = "Available add ons- Power Play and Double Play $1 extra."
     pb_official = "Official Rules and Play can be found- https://www.michiganlottery.com/games/powerball Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
@@ -23,8 +23,8 @@ def powerball():
 def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
     megaball = random.randint(1, 25)
-    mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = "Ticket price $5. Drawings are held Tues. & Fri."
+    mm_numbers_main = f"\nMega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
+    mm_drawings = "Ticket price to play $5. Drawings are held Tues. & Fri."
     mm_add = "Megaplier included with each Gameplay."
     mm_rules = "Official Rules and Play can be found- https://www.michiganlottery.com/games/mega-millions Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
@@ -33,7 +33,7 @@ def mega_millions():
 def lucky_life():
     lucky_num = sorted(random.sample(range(1, 49), 5))
     lucky_ball = random.randint(1, 18)
-    lucky_main = f"Lucky for Life Lucky Numbers: {lucky_num}, Lucky Ball: {lucky_ball}"
+    lucky_main = f"\nLucky for Life Lucky Numbers: {lucky_num}, Lucky Ball: {lucky_ball}"
     lucky_draw = "Ticket price $2. Drawings held Daily"
     lucky_rules = "Official Rules and Gameplay can be found- https://www.michiganlottery.com/games/lucky-for-life Good Luck!"
     return (lucky_main, lucky_draw, lucky_rules)
@@ -41,7 +41,7 @@ def lucky_life():
 
 def lotto_47():
     lotto_num = sorted(random.sample(range(1, 48), 6))
-    lotto_main = f"Lotto 47 Lucky Numbers: {lotto_num}"
+    lotto_main = f"\nLotto 47 Lucky Numbers: {lotto_num}"
     lotto_draw = "Ticket price to play $1. Drawings are held Wed. & Sat. 7:29pm ET"
     lotto_add = "Available add ons- Double Play and EZ Match $1 each"
     lotto_rules = "Official Rules and Play can be found- https://www.michiganlottery.com/games/classic-lotto-47 Good Luck!"
@@ -50,7 +50,7 @@ def lotto_47():
 
 def fantast_5():
     fant_num = sorted(random.sample(range(1, 40), 5))
-    fant_main = f"Fantasy 5 Lucky Numbers: {fant_num}"
+    fant_main = f"\nFantasy 5 Lucky Numbers: {fant_num}"
     fant_draw = "Ticket price to play $1. Drawings held Daily 7:29pm ET"
     fant_add = "Available add on- Double Play and EZ Match $1 each"
     fant_rules = "Officail Rules and Play can be found- https://www.michiganlottery.com/games/fantasy-5 Good Luck!"
@@ -83,10 +83,10 @@ def daily_4():
     set_2 = random.randint(0, 9)   
     set_3 = random.randint(0, 9)
     set_4 = random.randint(0, 9)
-    p4_main = f"Daily 4 Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
-    p4_now = f"Multiple ways to Play and Win!!!."
-    p4_drawings = f"Ticket Price to Play $1."      
-    p4_rules = f"Official Rules and Play can be found- https://www.michiganlottery.com/games/daily-4 Good Luck!"
+    p4_main = f"\nDaily 4 Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
+    p4_now = "Multiple ways to Play and Win!!!."
+    p4_drawings = "Ticket Price to Play $1."      
+    p4_rules = "Official Rules and Play can be found- https://www.michiganlottery.com/games/daily-4 Good Luck!"
     return (p4_main, p4_now, p4_drawings, p4_rules)
 
 
@@ -116,14 +116,14 @@ def daily3():
     set_1 = random.randint(0, 9)
     set_2 = random.randint(0, 9)   
     set_3 = random.randint(0, 9)
-    p3_main = f"Daily 3 Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
-    p3_now = f"Multiple ways to Play and Win!!!"
-    p3_drawings = f"Base ticket prices $.50 or $1."     
-    p3_rules = f"Official Rules and Play can be found- https://www.michiganlottery.com/games/daily-3 Good Luck!"    
+    p3_main = f"\nDaily 3 Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
+    p3_now = "Multiple ways to Play and Win!!!"
+    p3_drawings = "Base ticket prices $.50 or $1."     
+    p3_rules = "Official Rules and Play can be found- https://www.michiganlottery.com/games/daily-3 Good Luck!"    
     return (p3_main, p3_now, p3_drawings, p3_rules)
 
 
-# North Dakota Game Summaries
+# Michigan Game Summaries
 def powerball_summary():
     main = sorted(random.sample(range(1, 70), 5))
     rb = random.randint(1, 26)
