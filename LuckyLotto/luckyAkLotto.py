@@ -3,7 +3,7 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/05/26
+# last file update- 2025/07/14
 ###########################################################################
 
 import random 
@@ -12,57 +12,57 @@ import random
 def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.randint(1, 26)
-    pb_luck = f"Powerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = f"Base ticket price $2. Drawings are held Mon. Wed. & Sat." 
-    pb_add = f"Available add on- Power Play $1 extra."
-    pb_official = f"Official Rules and Play can be found- https://www.myarkansaslottery.com/games/powerball Good Luck!"    
+    pb_luck = f"\nPowerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
+    pb_draw = "Ticket price to play $2. Drawings are held Mon. Wed. & Sat." 
+    pb_add = "Available add on- Power Play $1 extra."
+    pb_official = "Official Rules and Play can be found- https://www.myarkansaslottery.com/games/powerball Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
 
 def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
     megaball = random.randint(1, 25)
-    mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = f"Base ticket price $5. Drawings are held Tues and Fri."
-    mm_add = f"Megaplier available with every gameplay."
-    mm_rules = f"Official Rules and Play can be found- https://www.myarkansaslottery.com/games/mega-millions Good Luck!"    
+    mm_numbers_main = f"\nMega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
+    mm_drawings = "Ticket price to play $5. Drawings are held Tues & Fri."
+    mm_add = "Megaplier available with every gameplay."
+    mm_rules = "Official Rules and Play can be found- https://www.myarkansaslottery.com/games/mega-millions Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
 
 
 def ark_lotto():
     lotto_main = sorted(random.sample(range(1, 41), 6))
-    lotto_numbers_main = f"Lucky Lotto Arkansas Numbers: {lotto_main}"
-    lotto_drawings = f"Base ticket price $2. Drawings are held Wed. & Sat. 9:00pm CT."    
-    lotto_rules = f"Official Rules and Play can be found- https://www.myarkansaslottery.com/games/lotto Good Luck!"
+    lotto_numbers_main = f"\nLucky Lotto Arkansas Numbers: {lotto_main}"
+    lotto_drawings = "Base ticket price $2. Drawings are held Wed. & Sat. 9:00pm CT."    
+    lotto_rules = "Official Rules and Play can be found- https://www.myarkansaslottery.com/games/lotto Good Luck!"
     return (lotto_numbers_main, lotto_drawings, lotto_rules)
 
 
 def nat_stJack():
     nat_main = sorted(random.sample(range(1, 40), 5))
-    nat_numbers_main = f"Lucky Natural State Jackpot Numbers: {nat_main}"
-    nat_drawings = f"Base ticket price $1. Cut off to purchase tickets 7:59pm CT. Drawings are held Daily 8:00pm CT."    
-    nat_rules = f"Official Rules and Play can be found- https://www.myarkansaslottery.com/games/natural-state-jackpot Good Luck!"
+    nat_numbers_main = f"\nLucky Natural State Jackpot Numbers: {nat_main}"
+    nat_drawings = "Ticket price to play $1. Drawings are held Daily 8:00pm CT."    
+    nat_rules = "Official Rules and Play can be found- https://www.myarkansaslottery.com/games/natural-state-jackpot Good Luck!"
     return (nat_numbers_main, nat_drawings, nat_rules)
 
 
 def lucky_4Life():
     life_main = sorted(random.sample(range(1, 49), 5))
     lucky_ball = random.randint(1, 18)
-    life_return = f"Lucky For Life Numbers: {life_main}, Lucky Ball: {lucky_ball}."
-    life_drawings = f"Base ticket price $2. Cut-off time to play is 8:30pm CT. Drawings are held Nightly 9:30pm CT."    
-    life_rules = f"Official Rules and Play can be found- https://www.myarkansaslottery.com/games/lucky-for-life Good Luck!"    
+    life_return = f"\nLucky For Life Numbers: {life_main}, Lucky Ball: {lucky_ball}."
+    life_drawings = "Ticket price to play $2. Drawings are held Nightly 9:30pm CT."    
+    life_rules = "Official Rules and Play can be found- https://www.myarkansaslottery.com/games/lucky-for-life Good Luck!"    
     return (life_return, life_drawings, life_rules)
 
 
 def cash_4():
     while True: 
         print("Select a game time to play:")
-        print("1. Mid-Day 12:59pm CT Draw")
-        print("2. Evening 6:59pm CT Draw")
+        print("1. Mid-Day 12:59pm Draw")
+        print("2. Evening 6:59pm Draw")
         
         try:
-            choice = int(input("Make selection and enter (1-3): ").strip())
+            choice = int(input("Make selection and enter 1 or 2: ").strip())
         except ValueError:
-            print("Invalid input. Please enter (1-3)")
+            print("Invalid input. Please enter 1 or 2")
             continue
 
         game_time_mapping = {
@@ -71,7 +71,7 @@ def cash_4():
         }    
 
         if choice not in game_time_mapping:
-            print("Invalid selection. Please choose (1-3)")
+            print("Invalid selection. Please choose 1 or 2")
             continue
 
         game_time = game_time_mapping[choice]
@@ -81,10 +81,10 @@ def cash_4():
     set_2 = random.randint(0, 9) 
     set_3 = random.randint(0, 9)
     set_4 = random.randint(0, 9)
-    c4_main = f"Cash 4 Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
-    c4_now = f"Now you have to decide to play these numbers Straight, Box, Straight/Box, or Combo."
-    c4_drawings = f"Base ticket prices are $.50 or $1. Mid-Day 12:59pm CT Drawings Held Monday-Saturday. Evening 6:59pm CT Drawings Held Monday-Sunday"     
-    c4_rules = f"Official Rules and Play can be found- https://www.myarkansaslottery.com/games/cash-4 Good Luck!"    
+    c4_main = f"\nCash 4 Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
+    c4_now = "Now you have to decide to play these numbers Straight, Box, Straight/Box, or Combo."
+    c4_drawings = "Ticket prices to play are $.50 or $1. \nMid-Day 12:59pm CT Drawings Held Monday-Saturday.\nEvening 6:59pm CT Drawings Held Monday-Sunday"     
+    c4_rules = "Official Rules and Play can be found- https://www.myarkansaslottery.com/games/cash-4 Good Luck!"    
     return (c4_main, c4_now, c4_drawings, c4_rules)
 
 
@@ -95,9 +95,9 @@ def cash_3():
         print("2. Evening 6:59pm CT Draw")
         
         try:
-            choice = int(input("Make selection and enter (1-3): ").strip())
+            choice = int(input("Make selection and enter 1 or 2: ").strip())
         except ValueError:
-            print("Invalid input. Please enter (1-3)")
+            print("Invalid input. Please enter 1 or 2")
             continue
 
         game_time_mapping = {
@@ -106,7 +106,7 @@ def cash_3():
         }    
 
         if choice not in game_time_mapping:
-            print("Invalid selection. Please choose (1-3)")
+            print("Invalid selection. Please choose 1 or 2")
             continue
 
         game_time = game_time_mapping[choice]
@@ -115,10 +115,10 @@ def cash_3():
     set_1 = random.randint(0, 9)
     set_2 = random.randint(0, 9) 
     set_3 = random.randint(0, 9)
-    c3_main = f"Cash 3 Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
-    c3_now = f"Now you have to decide to play these numbers Straight, Box, Straight/Box, or Combo."
-    c3_drawings = f"Base ticket prices are $.50 or $1. Mid-Day 12:59pm CT Drawings Held Monday-Saturday. Evening 6:59pm CT Drawings Held Monday-Sunday"      
-    c3_rules = f"Official Rules and Play can be found-https://www.myarkansaslottery.com/games/cash-3 Good Luck!"    
+    c3_main = f"\nCash 3 Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
+    c3_now = "Now you have to decide to play these numbers Straight, Box, Straight/Box, or Combo."
+    c3_drawings = "Base ticket prices are $.50 or $1.\nMid-Day 12:59pm CT Drawings Held Monday-Saturday.\nEvening 6:59pm CT Drawings Held Monday-Sunday"      
+    c3_rules = "Official Rules and Play can be found-https://www.myarkansaslottery.com/games/cash-3 Good Luck!"    
     return (c3_main, c3_now, c3_drawings, c3_rules)
 
 
@@ -181,13 +181,13 @@ ak_lotto_draw_games = {
     5: lucky_4Life,
     6: cash_4,
     7: cash_3,
-    8: lambda: ak_lotto_draw_games[random.randint(1, 8)](),
+    8: lambda: ak_lotto_draw_games[random.randint(1, 7)](),
     9: lambda: [func() for func in summary_lotto_draw_games.values()]    
 }
 
 #the menu
 def play_game(): 
-    print("Arkansas Lotto Game Choices")
+    print("\nArkansas Lotto Game Choices")
     print("1. Powerball")
     print("2. Mega Millions")
     print("3. Lotto Arkansas")
@@ -201,7 +201,7 @@ def play_game():
     #waiter
     while True:
         try:
-            ak_lotto_game_choice = int(input("Which Lucky Game would you like to try: "))
+            ak_lotto_game_choice = int(input("\nWhich Lucky Game would you like to try: "))
             if ak_lotto_game_choice in ak_lotto_draw_games:                        
                 result = ak_lotto_draw_games[ak_lotto_game_choice]()
 
