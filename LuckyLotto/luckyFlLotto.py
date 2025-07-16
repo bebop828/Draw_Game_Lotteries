@@ -3,7 +3,7 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/05/28
+# last file update- 2025/07/16
 ###########################################################################
 
 
@@ -13,55 +13,55 @@ import random
 def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.randint(1, 26)
-    pb_luck = f"Powerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = f"Base ticket price $2. Cut-off time to play is 10pm ET night of drawings. Drawings are held Mon. Wed. & Sat. 10:59pm ET." 
-    pb_add = f"Available add ons- Power Play and Double Play each for $1 extra."
-    pb_official = f"Official Rules and Play can be found- https://floridalottery.com/games/draw-games/powerball Good Luck!"    
+    pb_luck = f"\nPowerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
+    pb_draw = "Ticket price to play $2. Drawings are held Mon. Wed. & Sat. 10:59pm ET." 
+    pb_add = "Available add ons- Power Play and Double Play each for $1 extra."
+    pb_official = "Official Rules and Play can be found- https://floridalottery.com/games/draw-games/powerball Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
 
 
 def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
     megaball = random.randint(1, 25)
-    mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = f"Base ticket price $5. Cut-off time to play is 10pm ET night of drawings. Drawings are held Tues. Fri. 11pm ET."
-    mm_add = f"Megaplier available with every play."
-    mm_rules = f"Official Rules and Play can be found- https://floridalottery.com/games/draw-games/mega-millions Good Luck!"    
+    mm_numbers_main = f"\nMega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
+    mm_drawings = "Ticket price to play $5. Drawings are held Tues. & Fri. 11pm ET."
+    mm_add = "Megaplier available with every play."
+    mm_rules = "Official Rules and Play can be found- https://floridalottery.com/games/draw-games/mega-millions Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
 
 
 def cash_4_life_fl():
     cash_main = sorted(random.sample(range(1, 61), 5))
     cash_ball = random.randint(1, 4)
-    numbers_main = f"Cash 4 Life Lucky Numbers: {cash_main}, Cash Ball: {cash_ball}."
-    drawings_c4l = f"Base ticket price $2. Cut-off time to play is 8:30pm ET each night. Drawings are held Nightly 9pm ET."    
-    rules_c4l = f"Official Rules and Play can be found- https://floridalottery.com/games/draw-games/cash4life Good Luck!"    
+    numbers_main = f"\nCash 4 Life Lucky Numbers: {cash_main}, Cash Ball: {cash_ball}."
+    drawings_c4l = "Ticket price to play $2. Drawings are held Nightly 9pm ET."    
+    rules_c4l = "Official Rules and Play can be found- https://floridalottery.com/games/draw-games/cash4life Good Luck!"    
     return (numbers_main, drawings_c4l, rules_c4l)
 
 
 def florida_lotto_x():
     main = sorted(random.sample(range(1, 54), 6))
-    fl_lotto_main = f"Florida Lotto X with Double Play Lucky Numbers: {main}"
-    fl_lotto_drawings = f"Base ticket price $2. Cut-off time to play is 10:55pm ET night of drawings. Drawings are held Wed. Sat. 11:15pm ET."
-    fl_lotto_add = f"Available add ons- Double Play and EZmatch each for $1 extra."
-    fl_lotto_rules = f"Official Rules and Play can be found- https://floridalottery.com/games/draw-games/florida-lotto Good Luck!"    
+    fl_lotto_main = f"\nFlorida Lotto X with Double Play Lucky Numbers: {main}"
+    fl_lotto_drawings = "Ticket price to play $2. Drawings are held Wed. & Sat. 11:15pm ET."
+    fl_lotto_add = "Available add ons- Double Play and EZmatch each for $1 extra."
+    fl_lotto_rules = "Official Rules and Play can be found- https://floridalottery.com/games/draw-games/florida-lotto Good Luck!"    
     return (fl_lotto_main, fl_lotto_drawings, fl_lotto_add,fl_lotto_rules)
 
 
 def jackpot_triple_play():
     jackpot = sorted(random.sample(range(1, 47), 6))
-    jack_main = f"Jackpot Triple Play with Combo Lucky Numbers: {jackpot}"
-    jack_drawings = f"Base ticket price $1. Cut-off to play is 10:55pm ET night of drawings. Drawings held Tues. Fri. 11:15pm ET."
-    jack_add = f"Available add on- Combo for $1 extra."
-    jack_rules = f"Official Rules and Play can be found- https://floridalottery.com/games/draw-games/jackpot-triple-play Good Luck!"    
+    jack_main = f"\nJackpot Triple Play with Combo Lucky Numbers: {jackpot}"
+    jack_drawings = "Ticket price to play $1. Drawings held Tues. & Fri. 11:15pm ET."
+    jack_add = "Available add on- Combo for $1 extra."
+    jack_rules = "Official Rules and Play can be found- https://floridalottery.com/games/draw-games/jackpot-triple-play Good Luck!"    
     return (jack_main, jack_drawings, jack_add, jack_rules)
 
 
 def fantasy_5():
     while True: 
         print("Select a game time to play:")
-        print("1. Mid-day 1:05pm ET Draw")
-        print("2. Evening 11:15pm ET Draw")
+        print("1. Mid-day Draw")
+        print("2. Evening Draw")
 
         try:
             choice = int(input("Make selection and enter either 1 or 2: ").strip())
@@ -81,16 +81,16 @@ def fantasy_5():
         game_time = game_time_mapping[choice]
         break
     fantasy = sorted(random.sample(range(1, 37), 5))    
-    fantasy_main = f"Lucky Fantasy 5 Numbers for {game_time}: {fantasy}"
-    fantasy_drawings = f"Base ticket price $1. Cut-off time to play is 12:45pm ET Mid-day drawings and 10:55pm ET for evening."
-    fantasy_add = f"Available add on- EZmatch $1 extra."
-    fantasy_rules = f"Official Rules and Play can be found- https://floridalottery.com/games/draw-games/fantasy5 Good Luck!"    
+    fantasy_main = f"\nLucky Fantasy 5 Numbers for {game_time}: {fantasy}"
+    fantasy_drawings = "Ticket price to play $1. Drawings held Daily"
+    fantasy_add = "Available add on- EZmatch $1 extra."
+    fantasy_rules = "Official Rules and Play can be found- https://floridalottery.com/games/draw-games/fantasy5 Good Luck!"    
     return (fantasy_main, fantasy_drawings, fantasy_add, fantasy_rules)
 
 def cash_pop():    
     while True:
         try:
-            num_choices = int(input("How many Lucky Cash Pop numbers do you wish to play? Choose 1-15: ").strip())
+            num_choices = int(input("\nHow many Lucky Cash Pop numbers do you wish to play? Choose 1-15: ").strip())
             if num_choices < 1 or num_choices > 15:
                 print("Invalid selection. Please enter a number 1-15.")
                 continue
@@ -126,19 +126,19 @@ def cash_pop():
 
         game_time = game_time_mapping[choice]
         break
-    pop = sorted(random.sample(range(1, 15), num_choices))   
-    pop_main = f"Lucky Cash Pop Number for {game_time}: {pop}"
-    pop_drawings = f"Base ticket price varies. Players will choose from $1, $2, $5, or $10 bet amounts per Cash Pop numbers played." 
-    pop_win = f"Winning amount for each number will appear on ticket beside number. If number is drawn you win the amount displayed. "  
-    pop_rules = f"Official Rules and Play can be found- https://floridalottery.com/games/draw-games/cash-pop Good Luck!"    
+    pop = sorted(random.sample(range(1, 16), num_choices))   
+    pop_main = f"\nLucky Cash Pop Number for {game_time}: {pop}"
+    pop_drawings = "Ticket price to play varies. Players will choose from $1, $2, $5, or $10 bet amounts per Cash Pop numbers played." 
+    pop_win = "Winning amount for each number will appear on ticket beside number. If number is drawn you win the amount displayed. "  
+    pop_rules = "Official Rules and Play can be found- https://floridalottery.com/games/draw-games/cash-pop Good Luck!"    
     return (pop_main, pop_drawings,pop_win, pop_rules)
 
 
 def pick_2():
     while True: 
         print("Select a game time to play:")
-        print("1. Mid-day 1:30pm ET Draw")
-        print("2. Evening 11:15pm ET Draw")
+        print("1. Mid-day Draw")
+        print("2. Evening Draw")
 
         try:
             choice = int(input("Make selection and enter either 1 or 2: ").strip())
@@ -159,19 +159,19 @@ def pick_2():
         break
     set_1 = random.randint(0, 9)
     set_2 = random.randint(0, 9)  
-    pick2_main = f"Lucky Pick 2 plus FIREBALL Numbers for {game_time}: {set_1, set_2}"
-    pick_2_now = f"Now you have to decide to play these numbers Straight, Box, Straight/Box, or Front/Back"
-    pick2_drawings = f"Base ticket price $.50 or $1. Cut-off time to play is 1:17pm ET Mid-day drawings and 9:32pm ET for evening."
-    pick2_add = f"Available add on- FIREBALL (doubles ticket amount)."
-    pick2_rules = f"Official Rules and Play can be found- https://floridalottery.com/games/draw-games/pick-2 Good Luck!"    
+    pick2_main = f"\nLucky Pick 2 plus FIREBALL Numbers for {game_time}: {set_1, set_2}"
+    pick_2_now = "Multiple ways to Play and Win!"
+    pick2_drawings = "Ticket price to play $.50 or $1. Drawings held Daily."
+    pick2_add = "Available add on- FIREBALL (doubles ticket amount)."
+    pick2_rules = "Official Rules and Play can be found- https://floridalottery.com/games/draw-games/pick-2 Good Luck!"    
     return (pick2_main, pick_2_now, pick2_drawings, pick2_add, pick2_rules)
 
 
 def pick_3():
     while True: 
         print("Select a game time to play:")
-        print("1. Mid-day 1:30pm ET Draw")
-        print("2. Evening 11:15pm ET Draw")
+        print("1. Mid-day Draw")
+        print("2. Evening Draw")
 
         try:
             choice = int(input("Make selection and enter either 1 or 2: ").strip())
@@ -193,19 +193,19 @@ def pick_3():
     set_1 = random.randint(0, 9)
     set_2 = random.randint(0, 9)   
     set_3 = random.randint(0, 9)
-    p3_main = f"Pick 3 plus Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
-    p3_now = f"Now you have to decide to play these numbers Straight, Box, Straight/Box, or Combo"
-    p3_drawings = f"Base ticket prices $.50 or $1. Cut-off time to play is 1:19pm ET for Mid-Day Draw and 9:34pm for Evening."
-    p3_fire = f"Available add on- FIREBALL (doubles ticket amount)."   
-    p3_rules = f"Official Rules and Play can be found- https://floridalottery.com/games/draw-games/pick-3 Good Luck!"    
+    p3_main = f"\nPick 3 plus Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
+    p3_now = "Multiple ways to Play and Win!"
+    p3_drawings = "Ticket price to play $.50 or $1. Drawings held Daily."
+    p3_fire = "Available add on- FIREBALL (doubles ticket amount)."   
+    p3_rules = "Official Rules and Play can be found- https://floridalottery.com/games/draw-games/pick-3 Good Luck!"    
     return (p3_main, p3_now, p3_drawings, p3_fire, p3_rules)
 
 
 def pick_4():
     while True: 
         print("Select a game time to play:")
-        print("1. Mid-day 1:30pm ET Draw")
-        print("2. Evening 11:15pm ET Draw")
+        print("1. Mid-day Draw")
+        print("2. Evening Draw")
 
         try:
             choice = int(input("Make selection and enter either 1 or 2: ").strip())
@@ -228,19 +228,19 @@ def pick_4():
     set_2 = random.randint(0, 9)   
     set_3 = random.randint(0, 9)
     set_4 = random.randint(0, 9)
-    p4_main = f"Pick 4 plus Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
-    p4_now = f"Now you have to decide to play these numbers Straight, Box, Straight/Box, or Combo."
-    p4_drawings = f"Base ticket prices are $.50 or $1. Cut-off time to play is 1:20pm ET for Mid_Day Draw and 9:35pm ET for Evening."
-    p4_fire_mid = f"Available add on- FIREBALL (doubles ticket amount)."    
-    p4_rules = f"Official Rules and Play can be found- https://floridalottery.com/games/draw-games/pick-4 Good Luck!"
+    p4_main = f"\nPick 4 plus Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
+    p4_now = "Multiple ways to Play and Win!"
+    p4_drawings = "Ticket price to play $.50 or $1. Drawings held Daily."
+    p4_fire_mid = "Available add on- FIREBALL (doubles ticket amount)."    
+    p4_rules = "Official Rules and Play can be found- https://floridalottery.com/games/draw-games/pick-4 Good Luck!"
     return (p4_main, p4_now, p4_drawings, p4_fire_mid, p4_rules)
 
 
 def pick_5():
     while True: 
         print("Select a game time to play:")
-        print("1. Mid-day 1:30pm ET Draw")
-        print("2. Evening 11:15pm ET Draw")
+        print("1. Mid-day Draw")
+        print("2. Evening Draw")
 
         try:
             choice = int(input("Make selection and enter either 1 or 2: ").strip())
@@ -264,11 +264,11 @@ def pick_5():
     set_3 = random.randint(0, 9)
     set_4 = random.randint(0, 9)
     set_5 = random.randint(0, 9)
-    p5_main = f"Pick 5 with Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4, set_5}"
-    p5_now = f"Now you have to decide to play these numbers Straight, Box, Straight/Box, or Combo."
-    p5_drawings = f"Base ticket prices are $.50 or $1. Cut-off time to play is 1:18pm ET for Mid_Day Draw and 9:33pm ET for Evening."
-    p5_fire = f"Available add on- FIREBALL (doubles ticket amount)."    
-    p5_rules = f"Official Rules and Play can be found- https://floridalottery.com/games/draw-games/pick-5 Good Luck!"
+    p5_main = f"\nPick 5 with Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4, set_5}"
+    p5_now = "Multiple ways to Play and Win!"
+    p5_drawings = "Ticket price to play $.50 or $1. Drawings held Daily."
+    p5_fire = "Available add on- FIREBALL (doubles ticket amount)."    
+    p5_rules = "Official Rules and Play can be found- https://floridalottery.com/games/draw-games/pick-5 Good Luck!"
     return (p5_main, p5_now, p5_drawings, p5_fire, p5_rules)
 
 
@@ -344,11 +344,11 @@ summary_lotto_draw_games = {
     "Florida Lotto X": florida_lotto_x_summary,
     "Jackpot Triple Play with Combo": jackpot_triple_play_summary,
     "Fantasy 5": fantasy5_summary,
-    "Cash Pop (Single Number)": cash_4_life_fl_summary,
-    "Pick 2 with Fireball": pick2_summary,
-    "Pick 3 with Fireball": pick3_summary,
+    "Cash Pop (Single Number)": cash_pop_summary,
+    "Pick 5 with Fireball": pick5_summary,
     "Pick 4 with Fireball": pick4_summary,
-    "Pick 5 with Fireball": pick5_summary
+    "Pick 3 with Fireball": pick3_summary,
+    "Pick 2 with Fireball": pick2_summary
 }
 
 
@@ -361,17 +361,17 @@ fl_lotto_draw_games = {
     5: jackpot_triple_play,
     6: fantasy_5,
     7: cash_pop,    
-    8: pick_2,    
-    9: pick_3,    
-    10: pick_4,    
-    11: pick_5,
+    8: pick_5,    
+    9: pick_4,    
+    10: pick_3,    
+    11: pick_2,
     12: lambda: fl_lotto_draw_games[random.randint(1, 11)](),
     13: lambda: [func() for func in summary_lotto_draw_games.values()]    
 }
 
 # print the menu
 def play_game():
-    print("Florida Lotto Game Choices:")
+    print("\nFlorida Lotto Game Choices:")
     print("1. Powerball")
     print("2. Mega Millions")
     print("3. Cash 4 Life")
@@ -379,10 +379,10 @@ def play_game():
     print("5. Jackpot Triple Play")
     print("6. Fantasy 5")
     print("7. Cash Pop")        
-    print("8. Pick 2")    
-    print("9. Pick 3")    
-    print("10. Pick 4")    
-    print("11. Pick 5")
+    print("8. Pick 5")    
+    print("9. Pick 4")    
+    print("10. Pick 3")    
+    print("11. Pick 2")
     print("12. Can't Decide? Try Random Game!!!")
     print("13. How About Quick Pick All 11 Games")   
 
@@ -390,7 +390,7 @@ def play_game():
     #waiter
     while True:
         try:
-            fl_lotto_game_choice = int(input("Which Lucky Game would you like to try: "))
+            fl_lotto_game_choice = int(input("\nWhich Lucky Game would you like to try: "))
             if fl_lotto_game_choice in fl_lotto_draw_games:                        
                 result = fl_lotto_draw_games[fl_lotto_game_choice]()
 

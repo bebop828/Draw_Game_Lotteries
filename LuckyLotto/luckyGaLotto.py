@@ -3,9 +3,7 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/05/28
-# Georgia has Keno Draw Game.
-#Keno not included in current version
+# last file update- 2025/07/16
 ###########################################################################
 
 
@@ -15,46 +13,46 @@ import random
 def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.randint(1, 26)
-    pb_luck = f"Powerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = f"Base ticket price $2. Cut-off time to play is 10pm ET night of drawings. Drawings are held Mon. Wed. & Sat. 10:59pm ET." 
-    pb_add = f"Available add on- Power Play $1 extra."
-    pb_official = f"Official Rules and Play can be found- https://www.galottery.com/en-us/games/draw-games/powerball.html#tab-howToPlay Good Luck!"    
+    pb_luck = f"\nPowerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
+    pb_draw = "Ticket price to play $2. Drawings are held Mon. Wed. & Sat. 10:59pm ET." 
+    pb_add = "Available add on- Power Play $1 extra."
+    pb_official = "Official Rules and Play can be found- https://www.galottery.com/en-us/games/draw-games/powerball.html#tab-howToPlay Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
 
 
 def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
     megaball = random.randint(1, 25)
-    mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = f"Base ticket price $5. Cut-off time to play is 10pm ET night of drawings. Drawings are held Tues. Fri. 11pm ET."
-    mm_add = f"Megaplier available with every play."
-    mm_rules = f"Official Rules and Play can be found- https://www.galottery.com/en-us/games/draw-games/megamillions.html Good Luck!"    
+    mm_numbers_main = f"\nMega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
+    mm_drawings = "Ticket price to play $5. Drawings are held Tues. & Fri. 11pm ET."
+    mm_add = "Megaplier available with every play."
+    mm_rules = "Official Rules and Play can be found- https://www.galottery.com/en-us/games/draw-games/megamillions.html Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
 
 
 def cash_4_life_ga():
     cash_main = sorted(random.sample(range(1, 61), 5))
     cash_ball = random.randint(1, 4)
-    numbers_main = f"Cash 4 Life Lucky Numbers: {cash_main}, Cash Ball: {cash_ball}."
-    drawings_c4l = f"Base ticket price $2. Cut-off time to play is 8:45pm ET each night. Drawings are held Nightly 9pm ET."    
-    rules_c4l = f"Official Rules and Play can be found- https://www.galottery.com/en-us/games/draw-games/cash-for-life.html#tab-howToPlay Good Luck!"    
+    numbers_main = f"\nCash 4 Life Lucky Numbers: {cash_main}, Cash Ball: {cash_ball}."
+    drawings_c4l = "Ticket price to play $2. Drawings held Daily 9pm ET."    
+    rules_c4l = "Official Rules and Play can be found- https://www.galottery.com/en-us/games/draw-games/cash-for-life.html#tab-howToPlay Good Luck!"    
     return (numbers_main, drawings_c4l, rules_c4l)
 
 
 def fantasy_5_ga():
     fantasy_5_ga = sorted(random.sample(range(1, 43), 5))    
-    fantasy_5_gaMain = f"Georgia Fantasy 5 Lucky Numbers: {fantasy_5_ga}"
-    fantasy_5_gaDrawings = f"Base ticket price $1. Cut-off time to play is 10:45pm ET daily. Drawings held Daily 11:34pm ET."
-    fantasy_5_gaAdd = f"Available add on- Ca$h Match $1 extra."
-    fantasy_5_gaRules = f"Official Rules and Play can be found- https://www.galottery.com/en-us/games/draw-games/fantasy-five.html#tab-howToPlay"    
+    fantasy_5_gaMain = f"\nGeorgia Fantasy 5 Lucky Numbers: {fantasy_5_ga}"
+    fantasy_5_gaDrawings = "Ticket price to play $1. Drawings held Daily 11:34pm ET."
+    fantasy_5_gaAdd = "Available add on- Ca$h Match $1 extra."
+    fantasy_5_gaRules = "Official Rules and Play can be found- https://www.galottery.com/en-us/games/draw-games/fantasy-five.html#tab-howToPlay"    
     return (fantasy_5_gaMain, fantasy_5_gaDrawings, fantasy_5_gaAdd, fantasy_5_gaRules)
 
 
 def georgia_5():
     while True: 
         print("Select a game time to play:")
-        print("1. Mid-day 12:29pm ET Draw")
-        print("2. Evening 6:59pm ET Draw")
+        print("1. Mid-day Draw")
+        print("2. Evening Draw")
 
         try:
             choice = int(input("Make selection and enter either 1 or 2: ").strip())
@@ -78,18 +76,18 @@ def georgia_5():
     set_3 = random.randint(0, 9)
     set_4 = random.randint(0, 9)
     set_5 = random.randint(0, 9)
-    georgia_5_main = f"Georgia 5 Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4, set_5}"
-    georgia_5_drawings = f"Base ticket price $1.  Drawings held daily 12:29pm ET."
-    georgia_5_rules = f"Official Rules and Play can be found- https://www.galottery.com/en-us/games/draw-games/georgia-five.html Good Luck!" 
+    georgia_5_main = f"\nGeorgia 5 Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4, set_5}"
+    georgia_5_drawings = "Ticket price to play $1.  Drawings held Daily."
+    georgia_5_rules = "Official Rules and Play can be found- https://www.galottery.com/en-us/games/draw-games/georgia-five.html Good Luck!" 
     return ( georgia_5_main, georgia_5_drawings, georgia_5_rules)
 
 
 def cash_3():
     while True: 
         print("Select a game time to play:")
-        print("1. Mid-Day 12:29pm ET Draw")
-        print("2. Evening 6:59pm ET Draw")
-        print("3. Night 11:34pm ET Draw")
+        print("1. Mid-Day Draw")
+        print("2. Evening Draw")
+        print("3. Night Draw")
 
         try:
             choice = int(input("Make selection and enter (1-3): ").strip())
@@ -113,19 +111,19 @@ def cash_3():
     set_1 = random.randint(0, 9)
     set_2 = random.randint(0, 9) 
     set_3 = random.randint(0, 9)
-    c3_main = f"Cash 3 Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
-    c3_now = f"Now you have to decide to play these numbers Straight, Box, Straight/Box, Combo, 1 off, or Pairs"
-    c3_drawings = f"Ticket prices are $.50 or $1."
-    c3_rules = f"Official Rules and Play can be found- https://www.galottery.com/en-us/games/draw-games/cash-three.html#tab-howToPlay Good Luck!"    
+    c3_main = f"\nCash 3 Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
+    c3_now = "Now you have to decide to play these numbers Straight, Box, Straight/Box, Combo, 1 off, or Pairs"
+    c3_drawings = "Ticket prices to play are $.50 or $1."
+    c3_rules = "Official Rules and Play can be found- https://www.galottery.com/en-us/games/draw-games/cash-three.html#tab-howToPlay Good Luck!"    
     return (c3_main, c3_now, c3_drawings, c3_rules)
 
 
 def cash_4():
     while True: 
         print("Select a game time to play:")
-        print("1. Mid-Day 1:30pm ET Draw")
-        print("2. Evening 6:59pm ET Draw")
-        print("3. Night 11:34pm ET Draw")
+        print("1. Mid-Day Draw")
+        print("2. Evening Draw")
+        print("3. Night Draw")
 
         try:
             choice = int(input("Make selection and enter (1-3): ").strip())
@@ -150,11 +148,31 @@ def cash_4():
     set_2 = random.randint(0, 9) 
     set_3 = random.randint(0, 9)
     set_4 = random.randint(0, 9)
-    c4_main = f"Cash 4 Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
-    c4_now = f"Now you have to decide to play these numbers Straight, Box, Straight/Box, or Combo."
-    c4_drawings = f"Base ticket prices are $.50 or $1."      
-    c4_rules = f"Official Rules and Play can be found- https://www.galottery.com/en-us/games/draw-games/cash-four.html#tab-howToPlay Good Luck!"    
+    c4_main = f"\nCash 4 Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
+    c4_now = "Multiple ways to Play and Win!!!"
+    c4_drawings = "Ticket prices to play are $.50 or $1."      
+    c4_rules = "Official Rules and Play can be found- https://www.galottery.com/en-us/games/draw-games/cash-four.html#tab-howToPlay Good Luck!"    
     return (c4_main, c4_now, c4_drawings, c4_rules)
+
+
+def keno():
+    while True: 
+        try:
+            num_choices = int(input("How many spots would you like to play? Choose 1-10: ").strip())
+            if num_choices < 1 or num_choices > 10:
+                print("Invalid selection. Please enter a number 1-10.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid number 1-10")
+
+    spot_num = sorted(random.sample(range(1, 81), num_choices))
+    spot_main = f"\nHere are your Keno Lucky Numbers: {spot_num}"
+    spot_draw = "Ticket Wager to play varies: $1, $2, $3, $5, or $10 per play!\nDrawings held Daily every 3 1/2 minutes!"
+    spot_add = "Available add on: Multiplier and Bulls Eye (each Doubles Ticket Wager)"
+    spot_rules = "Official Rules and Play can be found- https://www.delottery.com/Keno Good Luck!"
+    return(spot_main, spot_draw, spot_add, spot_rules)
+
 
 
 # summary for each game
@@ -201,6 +219,10 @@ def cash4_summary():
     set_4 = random.randint(0, 9)
     return ("Cash 4", f"{draw_time4}: Numbers: {set_1}, {set_2}, {set_3}, {set_4}")
 
+def keno_summary(): 
+    spot_num = random.randint(1, 80)
+    return ("Keno (Single Spot)", f"Number: {spot_num}") 
+
 #summaries
 summary_lotto_draw_games = {
     "Powerball": powerball_summary,
@@ -208,8 +230,9 @@ summary_lotto_draw_games = {
     "Cash 4 Life": cash_4_life_ga_summary,
     "Fantasy 5": fantasy_5_ga_summary,
     "Georgia 5": ga5_summary,
-    "Cash 3": cash3_summary,
-    "Cash 4": cash4_summary    
+    "Cash 3": cash4_summary,
+    "Cash 4": cash3_summary,
+    "Keno": keno_summary    
 }
 
 
@@ -220,30 +243,32 @@ ga_lotto_draw_games = {
     3: cash_4_life_ga,     
     4: fantasy_5_ga,
     5: georgia_5,
-    6: cash_3,
-    7: cash_4,
-    8: lambda: ga_lotto_draw_games[random.randint(1, 8)](),
-    9: lambda: [func() for func in summary_lotto_draw_games.values()]       
+    6: cash_4,
+    7: cash_3,
+    8: keno,
+    9: lambda: ga_lotto_draw_games[random.randint(1, 8)](),
+    10: lambda: [func() for func in summary_lotto_draw_games.values()]       
 }
 
 #print the menu
 def play_game():
-    print("Georgia Lotto Game Choices:")
+    print("\nGeorgia Lotto Game Choices:")
     print("1. Powerball")
     print("2. Mega Millions")
     print("3. Cash 4 Life")
     print("4. Fantasy 5")
     print("5. Georgia 5")    
-    print("6. Cash 3")    
-    print("7. Cash 4")
-    print("8. Can't Decide? Try Random Game!!!")
-    print("9. How About Quick Pick All 7 Games")
+    print("6. Cash 4")    
+    print("7. Cash 3")
+    print("8. Keno")
+    print("9. Can't Decide? Try Random Game!!!")
+    print("10. How About Quick Pick All 8 Games")
         
 
     #waiter
     while True:
         try:
-            ga_lotto_game_choice = int(input("Which Lucky Game would you like to try: "))
+            ga_lotto_game_choice = int(input("\nWhich Lucky Game would you like to try: "))
             if ga_lotto_game_choice in ga_lotto_draw_games:                        
                 result = ga_lotto_draw_games[ga_lotto_game_choice]()
 
