@@ -3,7 +3,7 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/05/27
+# last file update- 2025/07/16
 ###########################################################################
 
 import random
@@ -12,47 +12,47 @@ import random
 def powerball(): 
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.randint(1, 26)
-    pb_luck = f"Powerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = f"Base ticket price $2. Drawings are held Mon. Wed. & Sat." 
-    pb_add = f"Available add ons- Power Play and Double Play each for $1 extra."
-    pb_official = f"Official Rules and Play can be found- https://www.coloradolottery.com/en/games/powerball/ Good Luck!"    
+    pb_luck = f"\nPowerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
+    pb_draw = "Ticket price to play $2. Drawings are held Mon. Wed. & Sat." 
+    pb_add = "Available add ons- Power Play and Double Play each for $1 extra."
+    pb_official = "Official Rules and Play can be found- https://www.coloradolottery.com/en/games/powerball/ Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
 
 
 def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
     megaball = random.randint(1, 25)
-    mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = f"Base ticket price $5. Cut-off time to play is 8pm MT night of drawings. Drawings are held Tues and Fri."
-    mm_add = f"Megaplier comes with every ticket purchase."
-    mm_rules = f"Official Rules and Play can be found- https://www.coloradolottery.com/en/games/megamillions/ Good Luck!"    
+    mm_numbers_main = f"\nMega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
+    mm_drawings = "Ticket price to play $5. Drawings are held Tues & Fri."
+    mm_add = "Megaplier comes with every ticket purchase."
+    mm_rules = "Official Rules and Play can be found- https://www.coloradolottery.com/en/games/megamillions/ Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
 
 
 def lucky_for_life_co():
     life_main = sorted(random.sample(range(1, 49), 5))
     lucky_ball = random.randint(1, 18)
-    life_return = f"Lucky For Life Lucky Numbers: {life_main}, Lucky Ball: {lucky_ball}."
-    life_drawings = f"Base ticket price $2. Cut-off time to play is 7:30pm MT each night. Drawings are held Nightly 8:30pm MT."    
-    life_rules = f"Official Rules and Play can be found- https://www.coloradolottery.com/en/games/luckyforlife/ Good Luck!"    
+    life_return = f"\nLucky For Life Lucky Numbers: {life_main}, Lucky Ball: {lucky_ball}."
+    life_drawings = "Ticket price to play $2. Drawings are held Nightly 8:30pm MT."    
+    life_rules = "Official Rules and Play can be found- https://www.coloradolottery.com/en/games/luckyforlife/ Good Luck!"    
     return (life_return, life_drawings, life_rules)
 
 
 def co_lotto():
     co_main = sorted(random.sample(range(1, 41), 6))
-    co_return = f"Colorado Lotto+ Lucky Numbers: {co_main}"
-    co_draw = f"Base ticket cost $2. Top Prize up to $250,000. Drawings held Mon, Wed, Sat."
-    co_add = f"Available add on- Play Plus $1"
-    co_rules = f"Official Rules and Play can be found- https://www.coloradolottery.com/en/games/lotto/ Good Luck!"
+    co_return = f"\nColorado Lotto+ Lucky Numbers: {co_main}"
+    co_draw = "Ticket price to play $2. Top Prize up to $250,000. Drawings held Mon. Wed. & Sat."
+    co_add = "Available add on- Play Plus $1"
+    co_rules = "Official Rules and Play can be found- https://www.coloradolottery.com/en/games/lotto/ Good Luck!"
     return(co_return, co_draw, co_add, co_rules)
 
 
 def cash5(): 
     cash5_num = sorted(random.sample(range(1, 33), 5))
-    cash5_return = f"Cash 5 Lucky Numbers: {cash5_num}"
-    cash5_draw = f"Base ticket cost $1. Drawings are held nightly."
-    cash5_add = f"Available add on- EZ Match $1 extra"
-    cash5_rules = f"Official Rules and Play can be found- https://www.coloradolottery.com/en/games/cash5/"
+    cash5_return = f"\nCash 5 Lucky Numbers: {cash5_num}"
+    cash5_draw = "Ticket price to play $1. Drawings held Daily."
+    cash5_add = "Available add on- EZ Match $1 extra"
+    cash5_rules = "Official Rules and Play can be found- https://www.coloradolottery.com/en/games/cash5/"
     return (cash5_return, cash5_draw, cash5_add, cash5_rules)
 
 
@@ -82,10 +82,10 @@ def pick_3():
     set_1 = random.randint(0, 9)
     set_2 = random.randint(0, 9)   
     set_3 = random.randint(0, 9)
-    p3_main = f"Pick 3 Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
-    p3_now = f"Now decide if you play these numbers Exact, Any Order, Exact/Any Order, Front Pair, or Back Pair"
-    p3_drawings = f"Ticket bet prices- $.50, $1, $2, or $5"      
-    p3_rules = f"Official Rules and Play can be found- https://www.coloradolottery.com/en/games/pick3/ Good Luck!"    
+    p3_main = f"\nPick 3 Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
+    p3_now = "Multiple ways to Play and Win!"
+    p3_drawings = "Ticket price to play varies: $.50, $1, $2, or $5"      
+    p3_rules = "Official Rules and Play can be found- https://www.coloradolottery.com/en/games/pick3/ Good Luck!"    
     return (p3_main, p3_now, p3_drawings, p3_rules)
 
 
@@ -130,7 +130,7 @@ summary_lotto_draw_games = {
 }
 
 
-#game choices
+# game choices
 co_lotto_draw_games = {
     1: powerball,
     2: mega_millions,
@@ -142,9 +142,9 @@ co_lotto_draw_games = {
     8: lambda: [func() for func in summary_lotto_draw_games.values()]  
 }
 
-#the menu
+# print the menu
 def play_game():
-    print("Colorado Lotto Game Choices")
+    print("\nColorado Lotto Game Choices")
     print("1. Powerball")
     print("2. Mega Millions")
     print("3. Lucky for Life")
@@ -157,7 +157,7 @@ def play_game():
     #waiter
     while True:
         try:
-            co_lotto_game_choice = int(input("Which Lucky Game would you like to try: "))
+            co_lotto_game_choice = int(input("\nWhich Lucky Game would you like to try: "))
             if co_lotto_game_choice in co_lotto_draw_games:                        
                 result = co_lotto_draw_games[co_lotto_game_choice]()
 
