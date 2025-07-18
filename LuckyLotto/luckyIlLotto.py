@@ -13,26 +13,26 @@ import random
 def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.randint(1, 26)
-    pb_luck = f"Powerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = f"Base ticket price $2. Drawings are held Mon. Wed. & Sat." 
-    pb_add = f"Available add on- Powerplay $1 extra."    
-    pb_official = f"Official Rules and Play can be found- https://www.illinoislottery.com/dbg/play/powerball Good Luck!"    
+    pb_luck = f"\nPowerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
+    pb_draw = "Ticket price to play $2. Drawings are held Mon. Wed. & Sat." 
+    pb_add = "Available add on- Powerplay $1 extra."    
+    pb_official = "Official Rules and Play can be found- https://www.illinoislottery.com/dbg/play/powerball Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
 
 
 def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
     megaball = random.randint(1, 25)
-    mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = f"Ticket price $5. Drawings are held Tues. Fri."
-    mm_add = f"Megaplier included with each Gameplay."
-    mm_rules = f"Official Rules and Play can be found- https://www.illinoislottery.com/dbg/play/megamillions Good Luck!"    
+    mm_numbers_main = f"\nMega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
+    mm_drawings = "Ticket price to play $5. Drawings are held Tues. & Fri."
+    mm_add = "Megaplier included with each Gameplay."
+    mm_rules = "Official Rules and Play can be found- https://www.illinoislottery.com/dbg/play/megamillions Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
 
 
 def luckyday_lotto():
     while True: 
-        print("Select a game time to play:")
+        print("\nSelect a game time to play:")
         print("1. Mid-day Draw")
         print("2. Evening Draw")
 
@@ -54,25 +54,25 @@ def luckyday_lotto():
         game_time = game_time_mapping[choice]
         break
     lucky_num = sorted(random.sample(range(1, 46), 5))
-    lucky_main = f"Lucky Day Lotto Lucky Numbers for {game_time}: {lucky_num}"
-    lucky_draw = f"Ticket to play $1. Drawings held everyday 2x a day"
-    lucky_add = f"Available add on- EZ Match for $1 per play"
-    lucky_rules = f"Official Rules and Gameplay can be found- https://www.illinoislottery.com/dbg/play/luckydaylotto Good Luck!"
+    lucky_main = f"\nLucky Day Lotto Lucky Numbers for {game_time}: {lucky_num}"
+    lucky_draw = "Ticket price to play $1. Drawings held everyday 2x a day"
+    lucky_add = "Available add on- EZ Match for $1 per play"
+    lucky_rules = "Official Rules and Gameplay can be found- https://www.illinoislottery.com/dbg/play/luckydaylotto Good Luck!"
     return (lucky_main, lucky_draw, lucky_add, lucky_rules)
 
 
 def lotto_extrashot():
     lotto_num = sorted(random.sample(range(1, 51), 6))
-    lotto_main = f"Lotto with Extra Shot Lucky Numbers: {lotto_num}"
-    lotto_draw = f"Ticket to play $2. Drrawings held Mon. Thur. and Sat."
-    lotto_add = f"Available add on- Extra Shot $1"
-    lotto_rules = f"Official Rules and Gameplay can be found- https://www.illinoislottery.com/dbg/play/lotto Good Luck!"
+    lotto_main = f"\nLotto with Extra Shot Lucky Numbers: {lotto_num}"
+    lotto_draw = "Ticket price to play $2. Drawings held Mon. Thur. & Sat."
+    lotto_add = "Available add on- Extra Shot $1"
+    lotto_rules = "Official Rules and Gameplay can be found- https://www.illinoislottery.com/dbg/play/lotto Good Luck!"
     return (lotto_main, lotto_draw, lotto_add, lotto_rules)
 
 
 def pick_3():
     while True: 
-        print("Select a game time to play:")
+        print("\nSelect a game time to play:")
         print("1. Mid-day Draw")
         print("2. Evening Draw")
 
@@ -96,17 +96,17 @@ def pick_3():
     set_1 = random.randint(0, 9)
     set_2 = random.randint(0, 9)   
     set_3 = random.randint(0, 9)
-    p3_main = f"Pick 3 plus Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
-    p3_now = f"Multiple ways to Play and Win!"
-    p3_drawings = f"Ticket prices range $.50 - $5. Drawings held multiple times daily."
-    p3_fire = f"Available add on- FIREBALL (doubles ticket amount)."   
-    p3_rules = f"Official Rules and Play can be found- https://www.illinoislottery.com/dbg/play/pick3 Good Luck!"    
+    p3_main = f"\nPick 3 plus Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
+    p3_now = "Multiple ways to Play and Win!!!"
+    p3_drawings = "Ticket price range to play- $.50 - $5. Drawings held Daily."
+    p3_fire = "Available add on- FIREBALL (doubles ticket amount)."   
+    p3_rules = "Official Rules and Play can be found- https://www.illinoislottery.com/dbg/play/pick3 Good Luck!"    
     return (p3_main, p3_now, p3_drawings, p3_fire, p3_rules)
 
 
 def pick_4():
     while True: 
-        print("Select a game time to play:")
+        print("\nSelect a game time to play:")
         print("1. Mid-day Draw")
         print("2. Evening Draw")
 
@@ -131,11 +131,11 @@ def pick_4():
     set_2 = random.randint(0, 9)   
     set_3 = random.randint(0, 9)
     set_4 = random.randint(0, 9)
-    p4_main = f"Pick 4 plus Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
-    p4_now = f"Multiple ways to Play and Win!"
-    p4_drawings = f"Ticket prices range $.50 - $5. Drawings held multiple times daily."
-    p4_fire_mid = f"Available add on- FIREBALL (doubles ticket amount)."    
-    p4_rules = f"Official Rules and Play can be found- https://www.illinoislottery.com/dbg/play/pick4 Good Luck!"
+    p4_main = f"\nPick 4 plus Fireball Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
+    p4_now = "Multiple ways to Play and Win!!!"
+    p4_drawings = "Ticket price to play range $.50 - $5. Drawings held Daily."
+    p4_fire_mid = "Available add on- FIREBALL (doubles ticket amount)."    
+    p4_rules = "Official Rules and Play can be found- https://www.illinoislottery.com/dbg/play/pick4 Good Luck!"
     return (p4_main, p4_now, p4_drawings, p4_fire_mid, p4_rules)
 
 # summary for each game
@@ -179,8 +179,8 @@ summary_lotto_draw_games = {
     "Mega Millions": mega_summary,
     "Lucky Day Lotto": luckyday_lotto_summary,
     "Lotto with Extra Shot": lotto_extrashot_summary,
-    "Pick 3 with Fireball": pick3_summary,
-    "Pick 4 eith Fireball": pick4_summary
+    "Pick 4 with Fireball": pick4_summary,
+    "Pick 3 with Fireball": pick3_summary
 }
 
 
@@ -190,8 +190,8 @@ il_lotto_draw_games = {
     2: mega_millions,
     3: luckyday_lotto, 
     4: lotto_extrashot,
-    5: pick_3,
-    6: pick_4,
+    5: pick_4,
+    6: pick_3,
     7: lambda: il_lotto_draw_games[random.randint(1, 6)](),
     8: lambda: [func() for func in summary_lotto_draw_games.values()]
 }
@@ -199,13 +199,13 @@ il_lotto_draw_games = {
 
 # print the menu
 def play_game():
-    print("Illinois Lotto Game Choices:")
+    print("\nIllinois Lotto Game Choices:")
     print("1. Powerball")
     print("2. Mega Millions")
     print("3. Lucky Day Lotto")
     print("4. Lotto with Extra Shot")
-    print("5. Pick 3 with Fireball")
-    print("6. Pick 4 with Fireball")
+    print("5. Pick 4 with Fireball")
+    print("6. Pick 3 with Fireball")
     print("7. Can't Decide? Try Random Game!!!")
     print("8. How About Quick Pick All 6 Games")
 
@@ -213,7 +213,7 @@ def play_game():
 #waiter
     while True:
         try:
-            il_lotto_game_choice = int(input("Which Lucky Game would you like to try: "))
+            il_lotto_game_choice = int(input("\nWhich Lucky Game would you like to try: "))
             if il_lotto_game_choice in il_lotto_draw_games:                        
                 result = il_lotto_draw_games[il_lotto_game_choice]()
 

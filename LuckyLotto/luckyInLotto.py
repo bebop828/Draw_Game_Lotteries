@@ -3,7 +3,7 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/06/09
+# last file update- 2025/07/18
 ########################################################################### 
 
 
@@ -13,53 +13,53 @@ import random
 def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.randint(1, 26)
-    pb_luck = f"Powerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = f"Base ticket price $2. Drawings are held Mon. Wed. & Sat." 
-    pb_add = f"Available add ons- Power Play and Double Play each for $1 extra."
-    pb_official = f"Official Rules and Play can be found- https://hoosierlottery.com/games/draw/powerball/ Good Luck!"    
+    pb_luck = f"\nPowerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
+    pb_draw = "Ticket price to play $2. Drawings are held Mon. Wed. & Sat." 
+    pb_add = "Available add ons- Power Play and Double Play each for $1 extra."
+    pb_official = "Official Rules and Play can be found- https://hoosierlottery.com/games/draw/powerball/ Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
 
 
 def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
     megaball = random.randint(1, 25)
-    mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = f"Ticket price $5. Drawings are held Tues & Fri. around 11pm ET."
-    mm_add = f"Megaplier included with each Gameplay."
-    mm_rules = f"Official Rules and Play can be found- https://hoosierlottery.com/games/draw/mega-millions/ Good Luck!"    
+    mm_numbers_main = f"\nMega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
+    mm_drawings = "Ticket price to play $5. Drawings are held Tues & Fri. around 11pm ET."
+    mm_add = "Megaplier included with each Gameplay."
+    mm_rules = "Official Rules and Play can be found- https://hoosierlottery.com/games/draw/mega-millions/ Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
 
 
 def cash_4_life_in():
     cash_main = sorted(random.sample(range(1, 61), 5))
     cash_ball = random.randint(1, 4)
-    numbers_main = f"Cash 4 Life Lucky Numbers: {cash_main}, Cash Ball: {cash_ball}."
-    drawings_c4l = f"Base ticket price $2. Drawings are held Nightly around 9pm ET."    
-    rules_c4l = f"Official Rules and Play can be found- https://hoosierlottery.com/games/draw/cash4life/ Good Luck!"    
+    numbers_main = f"\nCash 4 Life Lucky Numbers: {cash_main}, Cash Ball: {cash_ball}."
+    drawings_c4l = "Ticket price to play $2. Drawings are held Daily around 9pm ET."    
+    rules_c4l = "Official Rules and Play can be found- https://hoosierlottery.com/games/draw/cash4life/ Good Luck!"    
     return (numbers_main, drawings_c4l, rules_c4l)
 
 
 def hoosier_lotto(): 
     hoo_num = sorted(random.sample(range(1, 47), 6))
-    hoo_main = f"Hoosier Lotto +Plus Lucky Numbers: {hoo_num}"
-    hoo_draw = f"Base ticket price $2. Drawings held Wed. & Sat. around 11pm ET"
-    hoo_add = f"Available add on- +Plus $1"
-    hoo_rules = f"Official Rules and Play can be found- https://hoosierlottery.com/games/draw/hoosier-lotto Good Luck!"
+    hoo_main = f"\nHoosier Lotto +Plus Lucky Numbers: {hoo_num}"
+    hoo_draw = "Ticket price to play $2. Drawings held Wed. & Sat. around 11pm ET"
+    hoo_add = "Available add on- +Plus $1"
+    hoo_rules = "Official Rules and Play can be found- https://hoosierlottery.com/games/draw/hoosier-lotto Good Luck!"
     return (hoo_main, hoo_draw, hoo_add, hoo_rules)
 
 
 def cash5(): 
     cash_num = sorted(random.sample(range(1, 46), 5))
-    cash_main = f"Ca$h 5 Lucky Numbers: {cash_num}"
-    cash_draw = f"Base ticket price $1. Drawings held Daily around 11pm ET."
-    cash_add = f"Available add on = EZ Match $1"
-    cash_rules = f"Official Rules and Play can be found- https://hoosierlottery.com/games/draw/cash-5 Good Luck!"
+    cash_main = f"\nCa$h 5 Lucky Numbers: {cash_num}"
+    cash_draw = "Ticket price to play $1. Drawings held Daily around 11pm ET."
+    cash_add = "Available add on- EZ Match $1"
+    cash_rules = "Official Rules and Play can be found- https://hoosierlottery.com/games/draw/cash-5 Good Luck!"
     return (cash_main, cash_draw, cash_add, cash_rules)
     
 
 def quick_draw():
     while True: 
-        print("Select a game time to play:")
+        print("\nSelect a game time to play:")
         print("1. Mid-day Draw")
         print("2. Evening Draw")
 
@@ -81,17 +81,17 @@ def quick_draw():
         game_time = game_time_mapping[choice]
         break
     quick_num = sorted(random.sample(range(1, 80), 10))
-    quick_main = f"Quick Draw with Bullseye Lucky Numbers: {quick_num}"
-    quick_draw = f"Wager Range varies- $1, $2, $3, $5. Drawings held Daily."
-    quick_add = f"Available add on- Bullseye and EZ Match each $1 extra per play."
-    quick_rules = f"Official Rules and Play can be found- https://hoosierlottery.com/games/draw/quick-draw Good Luck!"
+    quick_main = f"\nQuick Draw with Bullseye Lucky Numbers: {quick_num}"
+    quick_draw = "Wager Range to play varies- $1, $2, $3, $5. Drawings held Daily."
+    quick_add = "Available add on- Bullseye and EZ Match each $1 extra per play."
+    quick_rules = "Official Rules and Play can be found- https://hoosierlottery.com/games/draw/quick-draw Good Luck!"
     return (quick_main, quick_draw, quick_add, quick_rules)
    
     
 def cash_pop():    
     while True:
         try:
-            num_choices = int(input("How many Lucky Cash Pop numbers do you wish to play? Choose 1-15: ").strip())
+            num_choices = int(input("\nHow many Lucky Cash Pop numbers do you wish to play? Choose 1-15: ").strip())
             if num_choices < 1 or num_choices > 15:
                 print("Invalid selection. Please enter a number 1-15.")
                 continue
@@ -101,11 +101,11 @@ def cash_pop():
     
     while True: 
         print("Select a game time to play:")
-        print("1. Morning 8:45am ET Draw")
-        print("2. Matinee 11:45am ET Draw")
-        print("3. Afternoon 2:45pm ET Draw")
-        print("4. Evening 6:45pm ET Draw")
-        print("5. Late Night 11:45pm ET Draw")
+        print("1. Morning")
+        print("2. Matinee ")
+        print("3. Afternoon")
+        print("4. Evening")
+        print("5. Late Night")
 
         try:
             choice = int(input("Make selection and enter (1-5): ").strip())
@@ -127,17 +127,17 @@ def cash_pop():
 
         game_time = game_time_mapping[choice]
         break
-    pop = sorted(random.sample(range(1, 15), num_choices))   
-    pop_main = f"Lucky Cash Pop Number for {game_time}: {pop}"
-    pop_drawings = f"Base ticket price varies. Players will choose from $1, $2, $5, or $10 bet amounts per Cash Pop numbers played." 
-    pop_win = f"Winning amount for each number will appear on ticket beside number. If number is drawn you win the amount displayed. "  
-    pop_rules = f"Official Rules and Play can be found- https://hoosierlottery.com/games/draw/cash-pop Good Luck!"    
+    pop = sorted(random.sample(range(1, 16), num_choices))   
+    pop_main = f"\nLucky Cash Pop Number for {game_time}: {pop}"
+    pop_drawings = "Ticket price to play varies. Players will choose from $1, $2, $5, or $10 bet amounts per Cash Pop numbers played." 
+    pop_win = "Winning amount for each number will appear on ticket beside number.\nIf number is drawn you win the amount displayed. "  
+    pop_rules = "Official Rules and Play can be found- https://hoosierlottery.com/games/draw/cash-pop Good Luck!"    
     return (pop_main, pop_drawings,pop_win, pop_rules)
 
 
 def daily4():
     while True: 
-        print("Select a game time to play:")
+        print("\nSelect a game time to play:")
         print("1. Mid-day Draw")
         print("2. Evening Draw")
 
@@ -162,16 +162,16 @@ def daily4():
     set_2 = random.randint(0, 9)   
     set_3 = random.randint(0, 9)
     set_4 = random.randint(0, 9)
-    p4_main = f"Daily 4 with Super Ball Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
-    p4_now = f"Multiple Ways to Play and Win!!!"
-    p4_drawings = f"Ticket Wager range- $.50, $1, $2, $5, $10. "       
-    p4_rules = f"Official Rules and Play can be found- https://hoosierlottery.com/games/draw/daily-4/ Good Luck!"    
+    p4_main = f"\nDaily 4 with Super Ball Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
+    p4_now = "Multiple Ways to Play and Win!!!"
+    p4_drawings = "Ticket Wager range- $.50, $1, $2, $5, $10. "       
+    p4_rules = "Official Rules and Play can be found- https://hoosierlottery.com/games/draw/daily-4/ Good Luck!"    
     return (p4_main, p4_now, p4_drawings, p4_rules)    
 
 
 def daily3():
     while True: 
-        print("Select a game time to play:")
+        print("\nSelect a game time to play:")
         print("1. Mid-day Draw")
         print("2. Evening Draw")
 
@@ -195,10 +195,10 @@ def daily3():
     set_1 = random.randint(0, 9)
     set_2 = random.randint(0, 9)   
     set_3 = random.randint(0, 9)    
-    p3_main = f"Daily 3 with Super Ball Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
-    p3_now = f"Multiple Ways to Play and Win!!!"
-    p3_drawings = f"Ticket Wager range- $.50, $1, $2, $5, $10. "       
-    p3_rules = f"Official Rules and Play can be found- https://hoosierlottery.com/games/draw/daily-3 Good Luck!"    
+    p3_main = f"\nDaily 3 with Super Ball Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
+    p3_now = "Multiple Ways to Play and Win!!!"
+    p3_drawings = "Ticket Wager range- $.50, $1, $2, $5, $10. "       
+    p3_rules = "Official Rules and Play can be found- https://hoosierlottery.com/games/draw/daily-3 Good Luck!"    
     return (p3_main, p3_now, p3_drawings, p3_rules)    
 
 

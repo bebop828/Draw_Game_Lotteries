@@ -3,7 +3,7 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/06/08
+# last file update- 2025/07/18
 ########################################################################### 
 
 
@@ -13,45 +13,45 @@ import random
 def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.randint(1, 26)
-    pb_luck = f"Powerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = f"Base ticket price $2. Drawings are held Mon. Wed. & Sat." 
-    pb_add = f"Available add ons- Power Play and Double Play each for $1 extra."
-    pb_official = f"Official Rules and Play can be found- https://www.ialottery.com/Pages/Games-Online/PowerBall.aspx Good Luck!"    
+    pb_luck = f"\nPowerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
+    pb_draw = "Ticket price to play $2. Drawings are held Mon. Wed. & Sat." 
+    pb_add = "Available add ons- Power Play and Double Play each for $1 extra."
+    pb_official = "Official Rules and Play can be found- https://www.ialottery.com/Pages/Games-Online/PowerBall.aspx Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
 
 
 def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
     megaball = random.randint(1, 25)
-    mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = f"Ticket price $5. Drawings are held Tues. Fri. 11pm ET."
-    mm_add = f"Megaplier included with each Gameplay."
-    mm_rules = f"Official Rules and Play can be found- https://www.ialottery.com/Pages/Games-Online/MegaMillions.aspx Good Luck!"    
+    mm_numbers_main = f"\nMega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
+    mm_drawings = "Ticket price to play $5. Drawings are held Tues. & Fri. 11pm ET."
+    mm_add = "Megaplier included with each Gameplay."
+    mm_rules = "Official Rules and Play can be found- https://www.ialottery.com/Pages/Games-Online/MegaMillions.aspx Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
 
 
 def lotto_america():
     lotto_num = sorted(random.sample(range(1, 53), 5))
     star_ball = random.randint(1, 10)
-    lotto_main = f"Lotto America with All-Star Ball Lucky Numbers: {lotto_num}, Star Ball: {star_ball}"
-    lotto_draw = f"Ticket price $1. Drawings are held Mon. Wed. & Sat around 9:15pm CT."
-    lotto_add = f"Add-on- All-Star Multiplier available for $1 extra"
-    lotto_rules = f"Official Rules and Play can be found- https://www.ialottery.com/Pages/Games-Online/LottoAmerica.aspx Good Luck!"
+    lotto_main = f"\nLotto America with All-Star Ball Lucky Numbers: {lotto_num}, Star Ball: {star_ball}"
+    lotto_draw = "Ticket price to play $1. Drawings are held Mon. Wed. & Sat around 9:15pm CT."
+    lotto_add = "Add-on- All-Star Multiplier available for $1 extra"
+    lotto_rules = "Official Rules and Play can be found- https://www.ialottery.com/Pages/Games-Online/LottoAmerica.aspx Good Luck!"
     return (lotto_main, lotto_draw, lotto_add, lotto_rules)
 
 
 def lucky_life():
     lucky_num = sorted(random.sample(range(1, 49), 5))
     lucky_ball = random.randint(1, 18)
-    lucky_main = f"Lucky for Life Lucky Numbers: {lucky_num}, Lucky Ball: {lucky_ball}"
-    lucky_draw = f"Ticket price $2. Drawings held Daily at 9:38pm CT"
-    lucky_rules = f"Official Rules and Gameplay can be found- https://www.ialottery.com/Pages/Games-Online/LuckyForLife.aspx Good Luck!"
+    lucky_main = f"\nLucky for Life Lucky Numbers: {lucky_num}, Lucky Ball: {lucky_ball}"
+    lucky_draw = "Ticket price to play $2. Drawings held Daily at 9:38pm CT"
+    lucky_rules = "Official Rules and Gameplay can be found- https://www.ialottery.com/Pages/Games-Online/LuckyForLife.aspx Good Luck!"
     return (lucky_main, lucky_draw, lucky_rules)
 
 
 def pick_4():
     while True: 
-        print("Select a game time to play:")
+        print("\nSelect a game time to play:")
         print("1. Mid-day Draw")
         print("2. Evening Draw")
 
@@ -76,16 +76,16 @@ def pick_4():
     set_2 = random.randint(0, 9)   
     set_3 = random.randint(0, 9)
     set_4 = random.randint(0, 9)
-    p4_main = f"Pick 4 Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
-    p4_now = f"Multiple ways to Play and Win!"
-    p4_drawings = f"Ticket wagers range- $.50, $1, $2, $3, $4, or $5. Drawings held Daily!"        
-    p4_rules = f"Official Rules and Play can be found- https://www.ialottery.com/Pages/Games-Online/Pick4.aspx Good Luck!"
+    p4_main = f"\nPick 4 Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
+    p4_now = "Multiple ways to Play and Win!"
+    p4_drawings = "Ticket wagers range- $.50, $1, $2, $3, $4, or $5. Drawings held Daily!"        
+    p4_rules = "Official Rules and Play can be found- https://www.ialottery.com/Pages/Games-Online/Pick4.aspx Good Luck!"
     return (p4_main, p4_now, p4_drawings, p4_rules)
 
 
 def pick_3():
     while True: 
-        print("Select a game time to play:")
+        print("\nSelect a game time to play:")
         print("1. Mid-day Draw")
         print("2. Evening Draw")
 
@@ -109,10 +109,10 @@ def pick_3():
     set_1 = random.randint(0, 9)
     set_2 = random.randint(0, 9)   
     set_3 = random.randint(0, 9)
-    p3_main = f"Pick 3 Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
-    p3_now = f"Multiple ways to Play and Win!"
-    p3_drawings = f"Ticket wagers range- $.50, $1, $2, $3, $4, or $5. Drawings held Daily!"      
-    p3_rules = f"Official Rules and Play can be found- https://www.ialottery.com/Pages/Games-Online/Pick3.aspx Good Luck!"    
+    p3_main = f"\nPick 3 Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
+    p3_now = "Multiple ways to Play and Win!"
+    p3_drawings = "Ticket wagers range- $.50, $1, $2, $3, $4, or $5. Drawings held Daily!"      
+    p3_rules = "Official Rules and Play can be found- https://www.ialottery.com/Pages/Games-Online/Pick3.aspx Good Luck!"    
     return (p3_main, p3_now, p3_drawings, p3_rules)
 
 
