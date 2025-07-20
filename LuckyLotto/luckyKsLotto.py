@@ -3,11 +3,8 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/06/18
-# Kansas has Keno. 
-# Keno not currently included in file
+# last file update- 2025/07/20
 ########################################################################### 
-
 
 
 import random
@@ -16,39 +13,39 @@ import random
 def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.randint(1, 26)
-    pb_luck = f"Powerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = f"Base ticket price $2. Drawings are held Mon. Wed. & Sat. 9:59pm CT" 
-    pb_add = f"Powerplay add on $1 extra."    
-    pb_official = f"Official Rules and Play can be found- https://www.kslottery.com/games/jackpot/powerball/ Good Luck!"    
+    pb_luck = f"\nPowerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
+    pb_draw = "Ticket price to play $2. Drawings are held Mon. Wed. & Sat. 9:59pm CT" 
+    pb_add = "Powerplay add on $1 extra."    
+    pb_official = "Official Rules and Play can be found- https://www.kslottery.com/games/jackpot/powerball/ Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
 
 
 def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
     megaball = random.randint(1, 25)
-    mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = f"Ticket price $5. Drawings are held Tues. & Fri."
-    mm_add = f"Megaplier included with each Gameplay."
-    mm_rules = f"Official Rules and Play can be found- https://www.kslottery.com/games/jackpot/megamillions Good Luck!"    
+    mm_numbers_main = f"\nMega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
+    mm_drawings = "Ticket price to play $5. Drawings are held Tues. & Fri."
+    mm_add = "Megaplier included with each Gameplay."
+    mm_rules = "Official Rules and Play can be found- https://www.kslottery.com/games/jackpot/megamillions Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
 
 
 def lotto_america():
     lotto_num = sorted(random.sample(range(1, 53), 5))
     star_ball = random.randint(1, 10)
-    lotto_main = f"Lotto America with All-Star Ball Lucky Numbers: {lotto_num}, Star Ball: {star_ball}"
-    lotto_draw = f"Ticket price $1. Drawings are held Mon. Wed. & Sat. 9:15pm CT"
-    lotto_add = f"Add on- All-Star Multiplier available for $1 extra"
-    lotto_rules = f"Official Rules and Play can be found- https://www.kslottery.com/games/jackpot/lottoamerica/ Good Luck!"
+    lotto_main = f"\nLotto America with All-Star Ball Lucky Numbers: {lotto_num}, Star Ball: {star_ball}"
+    lotto_draw = "Ticket price $1. Drawings are held Mon. Wed. & Sat. 9:15pm CT"
+    lotto_add = "Add on- All-Star Multiplier available for $1 extra"
+    lotto_rules = "Official Rules and Play can be found- https://www.kslottery.com/games/jackpot/lottoamerica/ Good Luck!"
     return (lotto_main, lotto_draw, lotto_add, lotto_rules)
 
 
 def lucky_life():
     lucky_num = sorted(random.sample(range(1, 49), 5))
     lucky_ball = random.randint(1, 18)
-    lucky_main = f"Lucky for Life Lucky Numbers: {lucky_num}, Lucky Ball: {lucky_ball}"
-    lucky_draw = f"Ticket price $2. Drawings held Daily 8:39pm CT"
-    lucky_rules = f"Official Rules and Gameplay can be found- https://www.kslottery.com/games/jackpot/luckyforlife/ Good Luck!"
+    lucky_main = f"\nLucky for Life Lucky Numbers: {lucky_num}, Lucky Ball: {lucky_ball}"
+    lucky_draw = "Ticket price $2. Drawings held Daily 8:39pm CT"
+    lucky_rules = "Official Rules and Gameplay can be found- https://www.kslottery.com/games/jackpot/luckyforlife/ Good Luck!"
     return (lucky_main, lucky_draw, lucky_rules)
 
 
@@ -57,27 +54,27 @@ def super_k():
     cash_ball = random.randint(1, 25)
     super_num2 = sorted(random.sample(range(1, 33), 5))
     cash_ball2 = random.randint(1, 25)
-    super_main = f"Super Kansas Ca$h Lucky Board 1: {super_num}, Cash Ball: {cash_ball}"
+    super_main = f"\nSuper Kansas Ca$h Lucky Board 1: {super_num}, Cash Ball: {cash_ball}"
     super_main2 = f"Super Kansas Ca$h Lucky Board 2: {super_num2}, Cash Ball: {cash_ball2}"
-    super_draw = f"Ticket price to play $1 for 2 boards. Drawings held Mon. Wed. & Sat."
-    super_rules = f"Official Rules and Play can be found- https://www.kslottery.com/games/jackpot/kansascash/ Good Luck!"
+    super_draw = "Ticket price to play $1 for 2 boards. Drawings held Mon. Wed. & Sat."
+    super_rules = "Official Rules and Play can be found- https://www.kslottery.com/games/jackpot/kansascash/ Good Luck!"
     return (super_main, super_main2, super_draw, super_rules)
 
 
 def two_by_two(): 
     two_num_rd = sorted(random.sample(range(1, 27), 2))
     two_num_wt = sorted(random.sample(range(1, 27), 2))
-    two_main = f"2 by 2 Lucky Red and White Numbers: Red- {two_num_rd}, White- {two_num_wt}"
-    two_draw = f"Ticket price $1. Drawings held Daily around 9:30pm CT"
-    two_rules = f"Official Rules and Play cab be found- https://www.kslottery.com/games/dailydraw/twobytwo/"
+    two_main = f"\n2 by 2 Lucky Red and White Numbers: Red- {two_num_rd}, White- {two_num_wt}"
+    two_draw = "Ticket price to play $1. Drawings held Daily around 9:30pm CT"
+    two_rules = "Official Rules and Play cab be found- https://www.kslottery.com/games/dailydraw/twobytwo/"
     return (two_main, two_draw, two_rules)
 
 
 def pick3():
     while True: 
-        print("Select a game time to play:")
-        print("1. Mid-day Draw 1:10pm CT")
-        print("2. Evening Draw 9:10pm CT")
+        print("\nSelect a game time to play:")
+        print("1. Mid-day")
+        print("2. Evening")
 
         try:
             choice = int(input("Make selection and enter either 1 or 2: ").strip())
@@ -99,11 +96,30 @@ def pick3():
     set_1 = random.randint(0, 9)
     set_2 = random.randint(0, 9)
     set_3 = random.randint(0, 9)
-    p3_main = f"Pick 3 Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
+    p3_main = f"\nPick 3 Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
     p3_now = f"Play Types for Pick 3: Exact or Any Order"
-    p3_drawings = f"Ticket price $1. Drawings held Daily."         
-    p3_rules = f"Official Rules and Play can be found- https://www.kslottery.com/games/dailydraw/pick3 Good Luck!"    
+    p3_drawings = "Ticket price to play $1. Drawings held Daily."         
+    p3_rules = "Official Rules and Play can be found- https://www.kslottery.com/games/dailydraw/pick3 Good Luck!"    
     return (p3_main, p3_now, p3_drawings, p3_rules)
+
+
+def keno():
+    while True: 
+        try:
+            num_choices = int(input("\nHow many spots would you like to play? Choose 1-10: ").strip())
+            if num_choices < 1 or num_choices > 10:
+                print("Invalid selection. Please enter a number 1-10.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid number 1-10")
+
+    spot_num = sorted(random.sample(range(1, 81), num_choices))
+    spot_main = f"\nHere are your Keno Lucky Numbers: {spot_num}"
+    spot_draw = "Ticket wager to play varies: $1-5 per play!\nDrawings held Daily every 4 minutes!"
+    spot_add = "Available add on: Bulls-Eye (Doubles the ticket price)"
+    spot_rules = "Official Rules and Play can be found- https://www.kslottery.com/games/dailydraw/keno Good Luck!"
+    return(spot_main, spot_draw, spot_add, spot_rules)
 
 
 # Summary For Each Game 
@@ -132,7 +148,7 @@ def super_k_summary():
     cash_ball = random.randint(1, 25)
     super_num2 = sorted(random.sample(range(1, 33), 5))
     cash_ball2 = random.randint(1, 25)
-    return ("Super Kansas Ca$h", f"Board 1: {super_num}, CB: {cash_ball} Board 2: {super_num2}, CB: {cash_ball2}")
+    return ("Super Kansas Ca$h", f"Board 1: {super_num}, CB: {cash_ball}\nSuper Kansas Ca$h - Board 2: {super_num2}, CB: {cash_ball2}")
 
 def two_by_two_summary():
     two_num_rd = sorted(random.sample(range(1, 27), 2))
@@ -146,6 +162,10 @@ def pick3_summary():
     set_3 = random.randint(0, 9)
     return ("Pick 3", f"{draw_time}: {set_1}, {set_2}, {set_3}")
 
+def keno_summary(): 
+    spot_num = random.randint(1, 80)
+    return ("Keno (Single Spot)", f"Number: {spot_num}") 
+
 #summaries
 summary_lotto_draw_games = {
     "Powerball": powerball_summary,
@@ -155,6 +175,7 @@ summary_lotto_draw_games = {
     "Super Kansas Ca$h": super_k_summary,
     "2 by 2": two_by_two_summary,
     "Pick 3": pick3_summary,
+    "Keno": keno_summary
 }
 
 
@@ -167,8 +188,9 @@ ks_lotto_draw_games = {
     5: super_k,
     6: two_by_two,
     7: pick3,
-    8: lambda: ks_lotto_draw_games[random.randint(1, 7)](),
-    9: lambda: [func() for func in summary_lotto_draw_games.values()]    
+    8: keno,
+    9: lambda: ks_lotto_draw_games[random.randint(1, 8)](),
+    10: lambda: [func() for func in summary_lotto_draw_games.values()]    
 }
 
 
@@ -182,8 +204,9 @@ def play_game():
     print("5. Super Kansas Ca$h")
     print("6. 2 by 2")
     print("7. Pick 3")
-    print("8. Can't Decide? Try Random Game!!!")
-    print("9. How About Quick Pick All 7 Games")
+    print("8. Keno")
+    print("9. Can't Decide? Try Random Game!!!")
+    print("10. How About Quick Pick All 8 Games")
     
     #waiter
     while True:
