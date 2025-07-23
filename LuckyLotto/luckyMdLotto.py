@@ -3,8 +3,8 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/07/11
-# Maryland has Keno. Current file does not include this game
+# last file update- 2025/07/23
+
 ###########################################################################
 
 import random
@@ -42,7 +42,7 @@ def cash_4_life():
 def cash_pop():    
     while True:
         try:
-            num_choices = int(input("How many Lucky Cash Pop numbers do you wish to play? Choose 1-15: ").strip())
+            num_choices = int(input("\nHow many Lucky Cash Pop numbers do you wish to play? Choose 1-15: ").strip())
             if num_choices < 1 or num_choices > 15:
                 print("Invalid selection. Please enter a number 1-15.")
                 continue
@@ -51,7 +51,7 @@ def cash_pop():
             print("Invalid input. Please enter a valid number 1-15.")
     
     while True: 
-        print("Select a game time to play:")
+        print("\nSelect a game time to play:")
         print("1. Morning 9am ET")
         print("2. Mid-day 1pm ET")
         print("3. Afternoon 6pm ET")
@@ -101,7 +101,7 @@ def multi_match():
     
 def pick_5():
     while True: 
-        print("Select a game time to play:")
+        print("\nSelect a game time to play:")
         print("1. Mid-day")
         print("2. Evening")
 
@@ -136,7 +136,7 @@ def pick_5():
 
 def pick_4():
     while True: 
-        print("Select a game time to play:")
+        print("\nSelect a game time to play:")
         print("1. Mid-day")
         print("2. Evening")
 
@@ -170,7 +170,7 @@ def pick_4():
 
 def pick_3():
     while True: 
-        print("Select a game time to play:")
+        print("\nSelect a game time to play:")
         print("1. Mid-day")
         print("2. Evening")
 
@@ -201,6 +201,25 @@ def pick_3():
     return (p3_main, p3_now, p3_drawings, p3_rules)
 
 
+def keno():
+    while True: 
+        try:
+            num_choices = int(input("\nHow many spots would you like to play? Choose 1-10: ").strip())
+            if num_choices < 1 or num_choices > 10:
+                print("Invalid selection. Please enter a number 1-10.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid number 1-10")
+
+    spot_num = sorted(random.sample(range(1, 81), num_choices))
+    spot_main = f"\nHere are your Keno Lucky Numbers: {spot_num}"
+    spot_draw = "Ticket wager to play varies: $1-5, $10, or $20 per play!\nDrawings held Daily every 3 1/2 minutes!"
+    spot_add = "Available add on: Bonus (Doubles wager price) or Super Bonus (Triples wager price)"
+    spot_rules = "Official Rules and Play can be found- https://www.masslottery.com/games/draw-and-instants/keno Good Luck!"
+    return(spot_main, spot_draw, spot_add, spot_rules)
+
+
 # Maryland Game Summaries
 def powerball_summary():
     main = sorted(random.sample(range(1, 70), 5))
@@ -220,7 +239,7 @@ def cash_4_life_summary():
 def cash_pop_summary(): 
     draw_time_pop = random.choice(["Morning", "Matinee", "Afternoon", "Evening", "Late Night"])
     pop = random.randint(1, 15)
-    return ("Cash Pop (Single Number)", f"{draw_time_pop}: Numbers: {pop} ")
+    return ("Cash Pop (Single Number)", f"{draw_time_pop}: Number: {pop} ")
 
 def bonus5_summary():
     bonus_num = sorted(random.sample(range(1, 40), 5))
@@ -254,6 +273,10 @@ def pick3_summary():
     set_3 = random.randint(0, 9)
     return ("Pick 3", f"{draw_time}: Numbers: {set_1}, {set_2}, {set_3}")
 
+def keno_summary(): 
+    spot_num = random.randint(1, 80)
+    return ("Keno (Single Spot)", f"Number: {spot_num}")
+
 #summaries
 summary_lotto_draw_games = {
     "Powerball": powerball_summary,
@@ -264,7 +287,8 @@ summary_lotto_draw_games = {
     "Multi Match": multi_match_summary,
     "Pick 5": pick5_summary,
     "Pick 4": pick4_summary, 
-    "Pick 3": pick3_summary
+    "Pick 3": pick3_summary,
+    "Keno": keno_summary
 }
 
 
@@ -279,8 +303,9 @@ md_lotto_draw_games = {
     7: pick_5,
     8: pick_4,
     9: pick_3,
-    10: lambda: md_lotto_draw_games[random.randint(1, 9)](),
-    11: lambda: [func() for func in summary_lotto_draw_games.values()]        
+    10: keno,
+    11: lambda: md_lotto_draw_games[random.randint(1, 10)](),
+    12: lambda: [func() for func in summary_lotto_draw_games.values()]        
 }
 
 
@@ -296,8 +321,9 @@ def play_game():
     print("7. Pick 5")
     print("8. Pick 4")
     print("9. Pick 3")
-    print("10. Can't Decide? Try a Random Game!")
-    print("11. How About Quick Pick All 9 Games")
+    print("10. Keno")
+    print("11. Can't Decide? Try a Random Game!")
+    print("12. How About Quick Pick All 10 Games")
     
     #waiter
     while True:

@@ -3,9 +3,8 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/07/11
-# Massachusetts has Keno. Current file does not include this game
-###########################################################################
+# last file update- 2025/07/22
+########################################################################### 
 
 import random
 
@@ -34,7 +33,7 @@ def lucky_life():
     lucky_num = sorted(random.sample(range(1, 49), 5))
     lucky_ball = random.randint(1, 18)
     lucky_main = f"\nLucky for Life Lucky Numbers: {lucky_num}, Lucky Ball: {lucky_ball}"
-    lucky_draw = "Ticket price $2. Drawings held Daily. 10:38pm ET"
+    lucky_draw = "Ticket price to play $2. Drawings held Daily 10:38pm ET"
     lucky_rules = "Official Rules and Gameplay can be found- https://www.masslottery.com/games/draw-and-instants/lucky-for-life Good Luck!"
     return (lucky_main, lucky_draw, lucky_rules)
 
@@ -63,7 +62,7 @@ def wheel():
         print("3. Red/Black")
 
         try:
-            choice = int(input("What is your selection: 1-3: ").strip())
+            choice = int(input("Which do you choose: 1-3: ").strip())
         except ValueError:
             print("Invalid input. Please enter either 1, 2, or 3.")
             continue
@@ -130,9 +129,9 @@ def wheel():
 
 def num_game():
     while True: 
-        print("Select a game time to play:")
-        print("1. Mid-day 2pm ET")
-        print("2. Evening 9pm ET")
+        print("\nSelect a game time to play:")
+        print("1. Mid-day")
+        print("2. Evening")
 
         try:
             choice = int(input("Make selection and enter either 1 or 2: ").strip())
@@ -160,6 +159,25 @@ def num_game():
     n4_drawings = "Ticket prices start as low as $.25"      
     n4_rules = "Official Rules and Play can be found- https://www.masslottery.com/games/draw-and-instants/the-numbers-game Good Luck!"
     return (n4_main, n4_now, n4_drawings, n4_rules)
+
+
+def keno():
+    while True: 
+        try:
+            num_choices = int(input("\nHow many spots would you like to play? Choose 1-12: ").strip())
+            if num_choices < 1 or num_choices > 12:
+                print("Invalid selection. Please enter a number 1-12.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid number 1-12")
+
+    spot_num = sorted(random.sample(range(1, 81), num_choices))
+    spot_main = f"\nHere are your Keno Lucky Numbers: {spot_num}"
+    spot_draw = "Ticket wager on each drawing from $1 to $20!\nDrawings held Daily every 3 minutes!"
+    spot_add = "Available add on: Bonus (Doubles the wager price)"
+    spot_rules = "Official Rules and Play can be found- https://www.masslottery.com/games/draw-and-instants/keno Good Luck!"
+    return(spot_main, spot_draw, spot_add, spot_rules)
 
 
 # Massachusetts Game Summaries
@@ -200,6 +218,10 @@ def num_game_summary():
     set_4 = random.randint(0, 9)
     return ("The Numbers Game", f"{draw_time4}: Numbers: {set_1}, {set_2}, {set_3}, {set_4}")
 
+def keno_summary(): 
+    spot_num = random.randint(1, 80)
+    return ("Keno (Single Spot)", f"Number: {spot_num}")
+
 # Massachusetts Game Summaries
 summary_lotto_draw_games = {
     "Powerball": powerball_summary,
@@ -208,7 +230,8 @@ summary_lotto_draw_games = {
     "Megabucks": mega_summary,
     "Mass Ca$h": mass_cash_summary,
     "Wheel of Luck": wheel_summary,
-    "The Numbers Game": num_game_summary
+    "The Numbers Game": num_game_summary,
+    "Keno": keno_summary    
 }
 
 # Massachusetts Game Choices
@@ -220,8 +243,9 @@ ma_lotto_draw_games = {
     5: mass_cash,
     6: wheel,
     7: num_game,    
-    8: lambda: ma_lotto_draw_games[random.randint(1, 7)](),    
-    9: lambda: [func() for func in summary_lotto_draw_games.values()]
+    8: keno,
+    9: lambda: ma_lotto_draw_games[random.randint(1, 8)](),    
+    10: lambda: [func() for func in summary_lotto_draw_games.values()]
 }   
 
 
@@ -234,9 +258,10 @@ def play_game():
     print("4. Megabucks")
     print("5. Mass Ca$h")
     print("6. Wheel of Luck")
-    print("7. The Numbers Game")        
-    print("8. Can't Decide? Try Random Game!!!")    
-    print("9. How About Quick Pick All 7 Games") 
+    print("7. The Numbers Game")
+    print("8. Keno")        
+    print("9. Can't Decide? Try Random Game!!!")    
+    print("10. How About Quick Pick All 8 Games") 
     
     #waiter
     while True:

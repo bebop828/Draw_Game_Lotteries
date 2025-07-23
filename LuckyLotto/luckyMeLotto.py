@@ -3,7 +3,7 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/07/11
+# last file update- 2025/07/22
 ###########################################################################
 
 import random
@@ -43,7 +43,7 @@ def lucky_life():
     lucky_num = sorted(random.sample(range(1, 49), 5))
     lucky_ball = random.randint(1, 18)
     lucky_main = f"\nLucky for Life Lucky Numbers: {lucky_num}, Lucky Ball: {lucky_ball}"
-    lucky_draw = "Ticket price to play $2. Drawings held Daily. 10:38pm ET"
+    lucky_draw = "Ticket price to play $2. Drawings held Daily 10:38pm ET"
     lucky_rules = "Official Rules and Gameplay can be found- https://www.mainelottery.com/games/lucky-for-life.html Good Luck!"
     return (lucky_main, lucky_draw, lucky_rules)
 
@@ -60,7 +60,7 @@ def mega_bucks():
 def gimme():
     gimme_num = sorted(random.sample(range(1, 40), 5))
     gimme_main = f"\nGimme 5 Lucky Numbers: {gimme_num}"
-    gimme_draw = "Ticket price to play $1. Drawings held Mon-Fri. 7pm ET"
+    gimme_draw = "Ticket price to play $1. Drawings held Mon-Fri 7pm ET"
     gimme_rules = "Official Rules and Play can be found- https://www.mainelottery.com/games/gimme5.html Good Luck!"
     return (gimme_main, gimme_draw, gimme_rules)
 
@@ -68,7 +68,7 @@ def gimme():
 def cash_pop():    
     while True:
         try:
-            num_choices = int(input("How many Lucky Cash Pop numbers do you wish to play? Choose 1-15: ").strip())
+            num_choices = int(input("\nHow many Lucky Cash Pop numbers do you wish to play? Choose 1-15: ").strip())
             if num_choices < 1 or num_choices > 15:
                 print("Invalid selection. Please enter a number 1-15.")
                 continue
@@ -113,9 +113,9 @@ def cash_pop():
 
 def pick4():
     while True:        
-        print("Select a game time to play:")
-        print("1. Mid-day 12:59pm ET Draw")
-        print("2. Evening 7:29pm ET Draw")
+        print("\nSelect a game time to play:")
+        print("1. Mid-day")
+        print("2. Evening")
 
         try:
             choice = int(input("Make selection and enter either 1 or 2: ").strip())
@@ -124,8 +124,8 @@ def pick4():
             continue
 
         game_time_mapping = {
-            1: 'Mid-Day',
-            2: 'Evening'
+            1: 'Mid-Day Draw',
+            2: 'Evening Draw'
         }    
 
         if choice not in game_time_mapping:
@@ -147,9 +147,9 @@ def pick4():
 
 def pick3():
     while True: 
-        print("Select a game time to play:")
-        print("1. Mid-day 1:10pm ET Draw")
-        print("2. Evening 6:50pm ET Draw")
+        print("\nSelect a game time to play:")
+        print("1. Mid-day")
+        print("2. Evening")
 
         try:
             choice = int(input("Make selection and enter either 1 or 2: ").strip())
@@ -269,7 +269,7 @@ def play_game():
     print("8. Pick 4")
     print("9. Pick 3")
     print("10. Can't Decide? Try Random Game!!!")
-    print("11. How About Quick Pick All 8 Games")
+    print("11. How About Quick Pick All 9 Games")
     
     #waiter
     while True:
