@@ -3,7 +3,7 @@
 ###################################################################
 
 ###################################################################
-# last file update- 2025/06/20
+# last file update- 2025/08/12
 ################################################################### 
 
 
@@ -13,8 +13,8 @@ import random
 def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.randint(1, 26)
-    pb_luck = f"Powerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = "Base ticket price $2. Drawings are held Mon. Wed. & Sat. 9:59pm CT" 
+    pb_luck = f"\nPowerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
+    pb_draw = "Ticket price to play $2. Drawings are held Mon. Wed. & Sat. 9:59pm CT" 
     pb_add = "Powerplay add on $1."    
     pb_official = "Official Rules and Play can be found- https://www.mnlottery.com/games/lotto/powerball Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
@@ -23,8 +23,8 @@ def powerball():
 def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
     megaball = random.randint(1, 25)
-    mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = "Ticket price $5. Drawings are held Tues. & Fri. 10pm CT"
+    mm_numbers_main = f"\nMega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
+    mm_drawings = "Ticket price to play $5. Drawings are held Tues. & Fri. 10pm CT"
     mm_add = "Megaplier included with each Gameplay."
     mm_rules = "Official Rules and Play can be found- https://www.mnlottery.com/games/lotto/mega-millions Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
@@ -33,8 +33,8 @@ def mega_millions():
 def lotto_america():
     lotto_num = sorted(random.sample(range(1, 53), 5))
     star_ball = random.randint(1, 10)
-    lotto_main = f"Lotto America with All-Star Ball Lucky Numbers: {lotto_num}, Star Ball: {star_ball}"
-    lotto_draw = "Ticket price $1. Drawings are held Mon. Wed. & Sat. 9:20pm CT"
+    lotto_main = f"\nLotto America with All-Star Ball Lucky Numbers: {lotto_num}, Star Ball: {star_ball}"
+    lotto_draw = "Ticket price to play $1. Drawings are held Mon. Wed. & Sat. 9:20pm CT"
     lotto_add = "Add on- All-Star Multiplier available for $1 extra"
     lotto_rules = "Official Rules and Play can be found- https://www.mnlottery.com/games/lotto/lotto-america Good Luck!"
     return (lotto_main, lotto_draw, lotto_add, lotto_rules) 
@@ -42,7 +42,7 @@ def lotto_america():
 
 def gopher():
     gopher_num = sorted(random.sample(range(1, 48), 5))
-    gopher_main = f"Gopher 5 Lucky Numbers: {gopher_num}"
+    gopher_main = f"\nGopher 5 Lucky Numbers: {gopher_num}"
     gopher_draw = "Ticket price to play $1. Drawings held Mon. Wed. & Fri. 6:17pm CT"
     gopher_rules = "Offical Rules and Play can be found- https://www.mnlottery.com/games/lotto/gopher-5"
     return (gopher_main, gopher_draw, gopher_rules)
@@ -50,7 +50,7 @@ def gopher():
 
 def north5():
     north_nums = sorted(random.sample(range(1, 35), 5))
-    north_main = f"North 5 Lucky Numbers: {north_nums}"
+    north_main = f"\nNorth 5 Lucky Numbers: {north_nums}"
     north_draw = "Ticket price to play $1. Drawings held Daily 6:17pm CT"
     north_add = "Available add on- EZ Match $1"
     north_rules = "Official Rules and Play can be found- https://www.mnlottery.com/games/lotto/north-5 Good Luck!"
@@ -61,7 +61,7 @@ def pick3():
     set_1 = random.randint(0, 9)
     set_2 = random.randint(0, 9)
     set_3 = random.randint(0, 9)
-    p3_main = f"Pick 3 Lucky Numbers: {set_1}, {set_2}, {set_3}"
+    p3_main = f"\nPick 3 Lucky Numbers: {set_1}, {set_2}, {set_3}"
     p3_draw = "Ticket Wager to play $.50 & $1. Drawings held Daily 6:17pm CT."
     p3_win = "Multiple ways to Play and Win!"
     p3_rules = "Official Rules and Play can be found- https://www.mnlottery.com/games/lotto/pick-3 Good Luck!"
