@@ -3,7 +3,7 @@
 ###################################################################
 
 ###################################################################
-# last file update- 2025/06/18
+# last file update- 2025/08/14
 ###################################################################  
 
 
@@ -13,8 +13,8 @@ import random
 def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.randint(1, 26)
-    pb_luck = f"Powerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = f"Base ticket price $3. Drawings are held Mon. Wed. & Sat. 8:59pm MT" 
+    pb_luck = f"\nPowerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
+    pb_draw = f"Ticket price to play $3. Drawings are held Mon. Wed. & Sat. 8:59pm MT" 
     pb_add = f"Powerplay option available with every play."
     pb_add2 = f"Double Play add on $1 extra"
     pb_official = f"Official Rules and Play can be found- https://www.montanalottery.com/en/view/game/powerball Good Luck!"    
@@ -24,8 +24,8 @@ def powerball():
 def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
     megaball = random.randint(1, 25)
-    mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = f"Ticket price $5. Drawings are held Tues. & Fri. 9pm MT"
+    mm_numbers_main = f"\nMega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
+    mm_drawings = f"Ticket price to play $5. Drawings are held Tues. & Fri. 9pm MT"
     mm_add = f"Megaplier included with each Gameplay."
     mm_rules = f"Official Rules and Play can be found- https://www.montanalottery.com/en/view/game/mega-millions Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
@@ -34,8 +34,8 @@ def mega_millions():
 def lotto_america():
     lotto_num = sorted(random.sample(range(1, 53), 5))
     star_ball = random.randint(1, 10)
-    lotto_main = f"Lotto America with All-Star Ball Lucky Numbers: {lotto_num}, Star Ball: {star_ball}"
-    lotto_draw = f"Ticket price $1. Drawings are held Mon, Wed, Sat 9pm MT"
+    lotto_main = f"\nLotto America with All-Star Ball Lucky Numbers: {lotto_num}, Star Ball: {star_ball}"
+    lotto_draw = f"Ticket price to play $1. Drawings are held Mon. Wed. & Sat. 9pm MT"
     lotto_add = f"Add on- All-Star Multiplier available for $1 extra"
     lotto_rules = f"Official Rules and Play can be found- https://www.montanalottery.com/en/view/game/lotto-america Good Luck!"
     return (lotto_main, lotto_draw, lotto_add, lotto_rules)
@@ -44,17 +44,17 @@ def lotto_america():
 def lucky_life():
     lucky_num = sorted(random.sample(range(1, 49), 5))
     lucky_ball = random.randint(1, 18)
-    lucky_main = f"Lucky for Life Lucky Numbers: {lucky_num}, Lucky Ball: {lucky_ball}"
-    lucky_draw = f"Ticket price $2. Drawings held Daily at 8:35pm MT"
+    lucky_main = f"\nLucky for Life Lucky Numbers: {lucky_num}, Lucky Ball: {lucky_ball}"
+    lucky_draw = f"Ticket price to play $2. Drawings held Daily at 8:35pm MT"
     lucky_rules = f"Official Rules and Gameplay can be found- https://www.montanalottery.com/en/view/game/lucky-for-life Good Luck!"
     return (lucky_main, lucky_draw, lucky_rules)
 
 
 def montana_cash():
     montana_num = sorted(random.sample(range(1, 46), 5))
-    montana_main = f"Lucky Montana Cash with Max Cash Numbers: {montana_num}"
+    montana_main = f"\nLucky Montana Cash with Max Cash Numbers: {montana_num}"
     montana_draw = f"Ticket price to play $1. Drawings held Wed. & Sat. 8pm MT"
-    montana_add = f"Available add on- Max Cash $1"
+    montana_add = f"Available add on- Max Cash $1 extra"
     montana_rules = f"Official Rules and Play can be found- https://www.montanalottery.com/en/view/game/montana-cash Good Luck!"
     return (montana_main, montana_draw, montana_add, montana_rules)
 
@@ -62,7 +62,7 @@ def montana_cash():
 def big_sky():
     big_num = sorted(random.sample(range(1, 32), 4))
     big_bonus = random.randint(1, 16)
-    big_main = f"Big $ky Bonus Lucky Numbers: {big_num}, Bonus Ball: {big_bonus}"
+    big_main = f"\nBig $ky Bonus Lucky Numbers: {big_num}, Bonus Ball: {big_bonus}"
     big_draw = f"Ticket price to play $2. Drawings held Daily at 7:30pm MT"
     big_rules = f"Official Rules and Play can be found- https://www.montanalottery.com/en/view/game/big-sky-bonus Good Luck!"
     return (big_main, big_draw, big_rules)

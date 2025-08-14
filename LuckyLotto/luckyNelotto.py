@@ -3,7 +3,7 @@
 ###################################################################
 
 ###################################################################
-# last file update- 2025/06/20
+# last file update- 2025/08/14
 ################################################################### 
 
 
@@ -14,9 +14,9 @@ import datetime
 def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.randint(1, 26)
-    pb_luck = f"Powerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = "Base ticket price $2. Drawings are held Mon. Wed. & Sat." 
-    pb_add = "Powerplay add on $1."    
+    pb_luck = f"\nPowerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
+    pb_draw = "Ticket price to play $2. Drawings are held Mon. Wed. & Sat." 
+    pb_add = "Available add on- Powerplay $1. extra"    
     pb_official = "Official Rules and Play can be found- https://nelottery.com/homeapp/lotto/28/gamedetail Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
 
@@ -24,8 +24,8 @@ def powerball():
 def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
     megaball = random.randint(1, 25)
-    mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = "Ticket price $5. Drawings are held Tues. & Fri."
+    mm_numbers_main = f"\nMega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
+    mm_drawings = "Ticket price to play $5. Drawings are held Tues. & Fri."
     mm_add = "Megaplier included with each Gameplay."
     mm_rules = "Official Rules and Play can be found- https://nelottery.com/homeapp/lotto/30/gamedetail Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
@@ -34,8 +34,8 @@ def mega_millions():
 def lotto_america():
     lotto_num = sorted(random.sample(range(1, 53), 5))
     star_ball = random.randint(1, 10)
-    lotto_main = f"Lotto America with All-Star Ball Lucky Numbers: {lotto_num}, Star Ball: {star_ball}"
-    lotto_draw = "Ticket price $1. Drawings are held Mon. Wed. & Sat."
+    lotto_main = f"\nLotto America with All-Star Ball Lucky Numbers: {lotto_num}, Star Ball: {star_ball}"
+    lotto_draw = "Ticket price to play $1. Drawings are held Mon. Wed. & Sat."
     lotto_add = "Add on- All-Star Multiplier available for $1 extra"
     lotto_rules = "Official Rules and Play can be found- https://nelottery.com/homeapp/lotto/40/gamedetail Good Luck!"
     return (lotto_main, lotto_draw, lotto_add, lotto_rules)
@@ -44,8 +44,8 @@ def lotto_america():
 def lucky_life():
     lucky_num = sorted(random.sample(range(1, 49), 5))
     lucky_ball = random.randint(1, 18)
-    lucky_main = f"Lucky for Life Lucky Numbers: {lucky_num}, Lucky Ball: {lucky_ball}"
-    lucky_draw = "Ticket price $2. Drawings held Daily."
+    lucky_main = f"\nLucky for Life Lucky Numbers: {lucky_num}, Lucky Ball: {lucky_ball}"
+    lucky_draw = "Ticket price to play $2. Drawings held Daily."
     lucky_rules = "Official Rules and Gameplay can be found- https://nelottery.com/homeapp/lotto/37/gamedetail Good Luck!"
     return (lucky_main, lucky_draw, lucky_rules)
 
@@ -72,8 +72,8 @@ def myday():
             continue  # invalid date like April 31
         
         # Format the result
-        myday_num = f"MyDaY Lucky Numbers: Month: {month:02d}, Day: {day:02d}, Year: {year1}{year2}"
-        myday_draw = "Ticket price $1. Drawings are held Daily."
+        myday_num = f"\nMyDaY Lucky Numbers: Month: {month:02d}, Day: {day:02d}, Year: {year1}{year2}"
+        myday_draw = "Ticket price to play $1. Drawings are held Daily."
         myday_rules = "Official Rules and Play: https://nelottery.com/homeapp/lotto/33/gamedetail Good Luck!"
         return (myday_num, myday_draw, myday_rules)
 
@@ -81,15 +81,15 @@ def myday():
 def two_by_two(): 
     two_num_rd = sorted(random.sample(range(1, 27), 2))
     two_num_wt = sorted(random.sample(range(1, 27), 2))
-    two_main = f"2 by 2 Lucky Red and White Numbers: Red- {two_num_rd}, White- {two_num_wt}"
-    two_draw = "Ticket price $1. Drawings held Daily."
+    two_main = f"\n2 by 2 Lucky Red and White Numbers: Red- {two_num_rd}, White- {two_num_wt}"
+    two_draw = "Ticket price to play $1. Drawings held Daily."
     two_rules = "Official Rules and Play cab be found- https://nelottery.com/homeapp/lotto/34/gamedetail Good Luck!"
     return (two_main, two_draw, two_rules)
 
 
 def pick5():
     pick5_num = sorted(random.sample(range(1, 41), 5))
-    pick5_main = f"Pick 5 Lucky Numbers: {pick5_num}"
+    pick5_main = f"\nPick 5 Lucky Numbers: {pick5_num}"
     pick5_draw = "Ticket prices to play $1. Drawings held Daily."
     pick5_rules = "Official Rules and Play can be found- https://nelottery.com/homeapp/lotto/31/gamedetail Good Luck!"
     return (pick5_main, pick5_draw, pick5_rules)
@@ -99,9 +99,9 @@ def pick3():
     set_1 = random.randint(0, 9)
     set_2 = random.randint(0, 9)
     set_3 = random.randint(0, 9)
-    pick3_main = f"Pick 3 Lucky Numbers: {set_1}, {set_2}, {set_3}"
-    pick3_draw = "Bet Amount to Play $1. Drawings held Daily."
-    pick3_win = "Multiple ways to Play and Win!"
+    pick3_main = f"\nPick 3 Lucky Numbers: {set_1}, {set_2}, {set_3}"
+    pick3_draw = "Ticket price to Play $1. Drawings held Daily."
+    pick3_win = "Multiple ways to Play and Win!!!"
     pick3_rules = "Official Rules and Play can be found- https://nelottery.com/homeapp/lotto/32/gamedetail Good Luck!"
     return (pick3_main, pick3_draw, pick3_win, pick3_rules)
 

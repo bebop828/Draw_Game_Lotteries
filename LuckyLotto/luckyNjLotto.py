@@ -3,7 +3,7 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/07/10
+# last file update- 2025/08/14
 ###########################################################################
 
 import random
@@ -13,7 +13,7 @@ def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.randint(1, 26)
     pb_luck = f"\nPowerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = "Base ticket price $2. Drawings are held Mon. Wed. & Sat. 10:59pm ET" 
+    pb_draw = "Ticket price to play $2. Drawings are held Mon. Wed. & Sat. 10:59pm ET" 
     pb_add = "Available Add ons- Powerplay and Double Play $1 each."    
     pb_official = "Official Rules and Play can be found- https://www.njlottery.com/en-us/drawgames/powerball.html Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
