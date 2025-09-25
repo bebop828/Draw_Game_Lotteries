@@ -3,7 +3,7 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/06/17
+# last file update- 2025/09/25
 ###########################################################################  
 
 
@@ -14,8 +14,8 @@ import random
 def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.randint(1, 26)
-    pb_luck = f"Powerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = f"Base ticket price $2. Drawings are held Mon. Wed. & Sat. 8:59pm MT" 
+    pb_luck = f"\nPowerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
+    pb_draw = f"Base ticket price $2. Drawings are held Mon. Wed. & Sat." 
     pb_add = f"Available add ons- Power Play and Double Play each for $1 extra."
     pb_official = f"Official Rules and Play can be found- https://www.nmlottery.com/games/powerball/ Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
@@ -24,8 +24,8 @@ def powerball():
 def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
     megaball = random.randint(1, 25)
-    mm_numbers_main = f"Mega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = f"Ticket price $5. Drawings are held Tues. Fri. 9pm MT."
+    mm_numbers_main = f"\nMega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
+    mm_drawings = f"Ticket price to play $5. Drawings are held Tues. & Fri."
     mm_add = f"Megaplier included with each Gameplay."
     mm_rules = f"Official Rules and Play can be found- https://www.nmlottery.com/games/mega-millions/ Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
@@ -34,8 +34,8 @@ def mega_millions():
 def lotto_america():
     lotto_num = sorted(random.sample(range(1, 53), 5))
     star_ball = random.randint(1, 10)
-    lotto_main = f"Lotto America with All-Star Ball Lucky Numbers: {lotto_num}, Star Ball: {star_ball}"
-    lotto_draw = f"Ticket price $1. Drawings are held Mon. Wed. & Sat around 9:15pm MT."
+    lotto_main = f"\nLotto America with All-Star Ball Lucky Numbers: {lotto_num}, Star Ball: {star_ball}"
+    lotto_draw = f"Ticket price to play $1. Drawings are held Mon. Wed. & Sat."
     lotto_add = f"Add-on- All-Star Multiplier available for $1 extra"
     lotto_rules = f"Official Rules and Play can be found- https://www.nmlottery.com/games/lotto-america/ Good Luck!"
     return (lotto_main, lotto_draw, lotto_add, lotto_rules)
@@ -43,17 +43,17 @@ def lotto_america():
 
 def roadrun_cash():
     road_num = sorted(random.sample(range(1, 38), 5))
-    road_main = f"Roadrunner Cash Lucky Numbers: {road_num}"
-    road_draw = f"Ticket price to play $1. Drawings are held Daily 9:30pm MT."
+    road_main = f"\nRoadrunner Cash Lucky Numbers: {road_num}"
+    road_draw = f"Ticket price to play $1. Drawings are held Daily!"
     road_rules = f"Official Rules and Play can be found- https://www.nmlottery.com/games/roadrunner-cash/"
     return (road_main, road_draw, road_rules)
 
 
 def pick_4():
     while True: 
-        print("Select a game time to play:")
-        print("1. Mid-day Draw 1pm")
-        print("2. Evening Draw 9:30pm")
+        print("\nSelect a game time to play:")
+        print("1. Mid-day Draw")
+        print("2. Evening Draw")
 
         try:
             choice = int(input("Make selection and enter either 1 or 2: ").strip())
@@ -76,7 +76,7 @@ def pick_4():
     set_2 = random.randint(0, 9)   
     set_3 = random.randint(0, 9)
     set_4 = random.randint(0, 9)
-    p4_main = f"Pick 4 Plus Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
+    p4_main = f"\nPick 4 Plus Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
     p4_now = f"Multiple ways to Play and Win!"
     p4_drawings = f"Ticket wager $1. Drawings held Daily!"        
     p4_rules = f"Official Rules and Play can be found- https://www.nmlottery.com/games/pick-4-plus Good Luck!"
@@ -85,9 +85,9 @@ def pick_4():
 
 def pick_3():
     while True: 
-        print("Select a game time to play:")
-        print("1. Mid-day Draw 1pm")
-        print("2. Evening Draw 9:30pm")
+        print("\nSelect a game time to play:")
+        print("1. Mid-day Draw")
+        print("2. Evening Draw")
 
         try:
             choice = int(input("Make selection and enter either 1 or 2: ").strip())
@@ -109,7 +109,7 @@ def pick_3():
     set_1 = random.randint(0, 9)
     set_2 = random.randint(0, 9)   
     set_3 = random.randint(0, 9)
-    p3_main = f"Pick 3 Plus Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
+    p3_main = f"\nPick 3 Plus Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
     p3_now = f"Multiple ways to Play and Win!"
     p3_drawings = f"Ticket wager $1. Drawings held Daily!"      
     p3_rules = f"Official Rules and Play can be found- https://www.nmlottery.com/games/pick-3-plus Good Luck!"    
