@@ -3,7 +3,7 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/07/16
+# last file update- 2025/09/24
 ###########################################################################
 
 
@@ -170,7 +170,7 @@ def keno():
     spot_main = f"\nHere are your Keno Lucky Numbers: {spot_num}"
     spot_draw = "Ticket Wager to play varies: $1, $2, $3, $5, or $10 per play!\nDrawings held Daily every 3 1/2 minutes!"
     spot_add = "Available add on: Multiplier and Bulls Eye (each Doubles Ticket Wager)"
-    spot_rules = "Official Rules and Play can be found- https://www.delottery.com/Keno Good Luck!"
+    spot_rules = "Official Rules and Play can be found- https://www.galottery.com/en-us/games/draw-games/keno.html#tab-howToPlay Good Luck!"
     return(spot_main, spot_draw, spot_add, spot_rules)
 
 

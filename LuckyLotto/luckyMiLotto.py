@@ -3,8 +3,7 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/07/11
-# Michigan has Keno and Cash Pop. These games to be coded later.
+# last file update- 2025/09/24
 ###########################################################################
 
 import random
@@ -46,6 +45,31 @@ def lotto_47():
     lotto_add = "Available add ons- Double Play and EZ Match $1 each"
     lotto_rules = "Official Rules and Play can be found- https://www.michiganlottery.com/games/classic-lotto-47 Good Luck!"
     return (lotto_main, lotto_draw, lotto_add, lotto_rules)
+
+def keno():
+    spot_num = sorted(random.sample(range(1, 81), 10))
+    spot_main = f"\nHere are your Keno Lucky Numbers: {spot_num}"
+    spot_draw = "Ticket Wager to play: $1\nDrawings held Daily at 7:30pm!"    
+    spot_rules = "Official Rules and Play can be found- https://www.michiganlottery.com/games/daily-keno Good Luck!"
+    return(spot_main, spot_draw, spot_rules)
+
+
+def cash_pop():    
+    while True:
+        try:
+            num_choices = int(input("\nHow many Lucky Cash Pop numbers do you wish to play? Choose 1-15: ").strip())
+            if num_choices < 1 or num_choices > 15:
+                print("Invalid selection. Please enter a number 1-15.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid number 1-15.")
+    
+    pop = sorted(random.sample(range(1, 16), num_choices))   
+    pop_main = f"\nLucky Cash Pop Number(s): {pop}"
+    pop_drawings = "Ticket price to play varies. Players will choose from $1, $2, $5, or $10 per Cash Pop numbers played.\nDrawings held 4x an hour Daily!"       
+    pop_rules = "Official Rules and Play can be found- https://www.michiganlottery.com/games/cash-pop Good Luck!"    
+    return (pop_main, pop_drawings, pop_rules)
 
 
 def fantast_5():
@@ -162,12 +186,22 @@ def daily3_summary():
     set_3 = random.randint(0, 9)
     return ("Daily 3", f"{draw_time}: Numbers: {set_1}, {set_2}, {set_3}")
 
+def keno_summary(): 
+    spot_num = sorted(random.sample(range(1, 80), 10))
+    return ("Keno (Single Spot)", f"Number: {spot_num}")
+
+def cash_pop_summary():     
+    pop = random.randint(1, 15)
+    return ("Cash Pop (Single Number):" f" {pop}")
+
 # summaries
 summary_lotto_draw_games = {
     "Powerball": powerball_summary,
     "Mega Millions": mega_summary,
     "Lucky for Life": lucky_summary,
     "Lotto 47": lotto_47_summary,
+    "Keno": keno_summary,
+    "Cash Pop": cash_pop_summary,
     "Fantasy 5": fantast_5_summary,
     "Daily 4": daily4_summary,
     "Daily 3": daily3_summary
@@ -180,11 +214,13 @@ mi_lotto_draw_games = {
     2: mega_millions,
     3: lucky_life,
     4: lotto_47,
-    5: fantast_5,
-    6: daily_4,
-    7: daily3,
-    8: lambda: mi_lotto_draw_games[random.randint(1, 7)](),
-    9: lambda: [func() for func in summary_lotto_draw_games.values()]
+    5: keno,
+    6: cash_pop,
+    7: fantast_5,
+    8: daily_4,
+    9: daily3,
+    10: lambda: mi_lotto_draw_games[random.randint(1, 9)](),
+    11: lambda: [func() for func in summary_lotto_draw_games.values()]
 }
 
 
@@ -195,11 +231,13 @@ def play_game():
     print("2. Mega Millions")
     print("3. Lucky for Life")
     print("4. Lotto 47")
-    print("5. Fantasy 5")
-    print("6. Daily 4")
-    print("7. Daily 3")
-    print("8. Can't Decide? Try Random Game!!!")
-    print("9. How About Quick Pick All 7 Games")
+    print("5. Keno")
+    print("6. Cash Pop")
+    print("7. Fantasy 5")
+    print("8. Daily 4")
+    print("9. Daily 3")
+    print("10. Can't Decide? Try Random Game!!!")
+    print("11. How About Quick Pick All 9 Games")
     
     
     #waiter

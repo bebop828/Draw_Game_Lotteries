@@ -3,8 +3,7 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/07/10
-# Massachusetts has Keno. Current file does not include this game
+# last file update- 2025/09/24
 ###########################################################################
 
 import random
@@ -54,6 +53,25 @@ def gimme():
     gimme_draw = "Ticket price to play $1. Drawings held Mon-Fri."
     gimme_rules = "Official Rules and Play can be found- https://www.nhlottery.com/game/gimme-five Good Luck!"
     return (gimme_main, gimme_draw, gimme_rules)
+
+
+def keno ():
+    while True: 
+        try:
+            num_choices = int(input("How many spots would you like to play? Choose 1-12: ").strip())
+            if num_choices < 1 or num_choices > 12:
+                print("Invalid selection. Please enter a number 1-12.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid number 1-10")
+
+    spot_num = sorted(random.sample(range(1, 81), num_choices))
+    spot_main = f"\nHere are your Keno Lucky Numbers: {spot_num}"
+    spot_draw = "Ticket Wager to play varies: $1, $2, $3, $4, $5, $10, $15, $20 or $25 per play!\nDrawings held daily from 11:05 AM to 1:00 AM Every 5 minutes!"
+    spot_add = "Available add on: Keno 603 Plus (doubles the ticket price)"
+    spot_rules = "Official Rules and Play can be found- https://www.nhlottery.com/game/keno Good Luck!"
+    return(spot_main, spot_draw, spot_add, spot_rules)
 
 
 def pick4():
@@ -148,6 +166,10 @@ def gimme_summary():
     gimme_num = sorted(random.sample(range(1, 40), 5))
     return ("Gimme 5", f"Numbers: {gimme_num}")
 
+def keno_summary(): 
+    spot_num = random.randint(1, 80)
+    return ("Keno (Single Spot)", f"Number: {spot_num}")
+
 def pick4_summary(): 
     draw_time4 = random.choice(["Day", "Evening"])
     set_1 = random.randint(0, 9)
@@ -170,6 +192,7 @@ summary_lotto_draw_games = {
     "Lucky for Life": lucky_summary,
     "MegaBucks": mega_bucks_summary,
     "Gimme 5": gimme_summary,
+    "Keno": keno_summary,
     "Pick 4": pick4_summary,
     "Pick 3": pick3_summary
 }
@@ -181,10 +204,11 @@ nh_lotto_draw_games = {
     3: lucky_life,
     4: mega_bucks,
     5: gimme,
-    6: pick4, 
-    7: pick3,
-    8: lambda: nh_lotto_draw_games[random.randint(1, 7)](),
-    9: lambda: [func() for func in summary_lotto_draw_games.values()]    
+    6: keno,
+    7: pick4, 
+    8: pick3,
+    9: lambda: nh_lotto_draw_games[random.randint(1, 8)](),
+    10: lambda: [func() for func in summary_lotto_draw_games.values()]    
 }
 
 # print the menu
@@ -194,11 +218,12 @@ def play_game():
     print("2. Mega Millions")
     print("3. Lucky for Life")
     print("4. MegaBucks")
-    print("5. Gimme 5")    
-    print("6. Pick 4")
-    print("7. Pick 3")
-    print("8. Can't Decide? Try Random Game!!!")
-    print("9. How About Quick Pick All 7 Games")
+    print("5. Gimme 5")
+    print("6. Keno")    
+    print("7. Pick 4")
+    print("8. Pick 3")
+    print("9. Can't Decide? Try Random Game!!!")
+    print("10. How About Quick Pick All 8 Games")
     
     #waiter
     while True:

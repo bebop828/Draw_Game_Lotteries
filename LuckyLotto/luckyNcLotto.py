@@ -3,8 +3,7 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/06/02
-# NC has Keno. Keno not currently included with file
+# last file update- 2025/09/25
 ###########################################################################
 
 
@@ -36,6 +35,72 @@ def lucky_for_life_nc():
     life_drawings = f"Base ticket price $2. Cut-off time for retail play is 9:30pm ET each night. Drawings are held Nightly 10:30pm ET."    
     life_rules = f"Official Rules and Play can be found- https://nclottery.com/lucky-for-life-how-to-play Good Luck!"    
     return (life_return, life_drawings, life_rules)
+
+def cash_pop():    
+    while True:
+        try:
+            num_choices = int(input("\nHow many Lucky Cash Pop numbers do you wish to play? Choose 1-15: ").strip())
+            if num_choices < 1 or num_choices > 15:
+                print("Invalid selection. Please enter a number 1-15.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid number 1-15.")
+    
+    while True: 
+        print("Select a game time to play:")
+        print("1. Morning Buzz 9am")
+        print("2. Lunch Rush 1pm")
+        print("3. Clock Out Cash 5pm")
+        print("4. Primetime POP 8pm")
+        print("5. Midnight Money 11:59pm")
+
+        try:
+            choice = int(input("Make selection and enter (1-5): ").strip())
+        except ValueError:
+            print("Invalid input. Please enter either (1-5)")
+            continue
+
+        game_time_mapping = {
+            1: 'Morning Buzz',
+            2: 'Lunch Rush',
+            3: 'Clock Out Cash',
+            4: 'Primetime POP',
+            5: 'Midnight Money'
+        }    
+
+        if choice not in game_time_mapping:
+            print("Invalid selection. Please enter (1-5)")
+            continue
+
+        game_time = game_time_mapping[choice]
+        break
+    pop = sorted(random.sample(range(1, 16), num_choices))   
+    pop_main = f"\nLucky Cash Pop Number for {game_time}: {pop}"
+    pop_drawings = "Ticket price to play varies. Players will choose from $1, $2, $5, or $10 bet amounts per Cash Pop numbers played." 
+    pop_win = "Winning amount for each number will appear on ticket beside number. If number is drawn you win the amount displayed. "  
+    pop_rules = "Official Rules and Play can be found- https://nclottery.com/cash-pop Good Luck!"    
+    return (pop_main, pop_drawings,pop_win, pop_rules)
+
+
+def keno():
+    while True: 
+        try:
+            num_choices = int(input("How many spots would you like to play? Choose 1-10: ").strip())
+            if num_choices < 1 or num_choices > 10:
+                print("Invalid selection. Please enter a number 1-10.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid number 1-10")
+
+    spot_num = sorted(random.sample(range(1, 81), num_choices))
+    spot_main = f"\nHere are your Keno Lucky Numbers: {spot_num}"
+    spot_draw = "Ticket Wager to play varies: $1, $2, $3, $5, or $10 per play!\nDrawings held Daily every 4 minutes!"
+    spot_add = "Available add on: Multiplier (Doubles Ticket Price)"
+    spot_rules = "Official Rules and Play can be found- https://nclottery.com/keno Good Luck!"
+    return(spot_main, spot_draw, spot_add, spot_rules)
+
 
 def cash_5():
     cash_5_main = sorted(random.sample(range(1, 44), 5))
@@ -131,6 +196,15 @@ def lucky_summary():
     life_ball = random.randint(1, 18)
     return ("Lucky for Life", f"Numbers: {life_num}, Lucky Ball: {life_ball}")
 
+def cash_pop_summary(): 
+    draw_time_pop = random.choice(["Morning Buzz", "Lunch Rush", "Clock Out Cash", "Primetime Pop", "Midnight Money"])
+    pop = random.randint(1, 15)
+    return ("Cash Pop (Single Number)", f"{draw_time_pop}: Number: {pop} ")
+
+def keno_summary(): 
+    spot_num = random.randint(1, 80)
+    return ("Keno (Single Spot)", f"Number: {spot_num}") 
+
 def cash_5_summary():
     cash_5_main = sorted(random.sample(range(1, 44), 5))
     return ("Cash 5", f"Numbers: {cash_5_main}")
@@ -155,6 +229,8 @@ summary_lotto_draw_games = {
     "Powerball": powerball_summary,
     "Mega Millions": mega_summary,
     "Lucky for Life": lucky_summary,
+    "Cash Pop": cash_pop_summary,
+    "Keno": keno_summary,
     "Cash 5": cash_5_summary,
     "Pick 3": pick3_summary,
     "Pick 4": pick4_summary
@@ -166,29 +242,33 @@ nc_lotto_draw_games = {
     1: powerball,
     2: mega_millions,
     3: lucky_for_life_nc,
-    4: cash_5,
-    5: pick_3,
-    6: pick_4,
-    7: lambda: nc_lotto_draw_games[random.randint(1, 6)](),
-    8: lambda: [func() for func in summary_lotto_draw_games.values()]
+    4: cash_pop,
+    5: keno,
+    6: cash_5,
+    7: pick_3,
+    8: pick_4,
+    9: lambda: nc_lotto_draw_games[random.randint(1, 8)](),
+    10: lambda: [func() for func in summary_lotto_draw_games.values()]
 }
 
 # print the menu
 def play_game():
-    print("North Carolina Lotto:")
+    print("\nNorth Carolina Lotto:")
     print("1. Powerball")
     print("2. Mega Millions")
     print("3. Lucky For Life")
-    print("4. Cash 5 Double Play")
-    print("5. Pick 3")
-    print("6. Pick 4 ")
-    print("7. Can't Decide? Try Random Game!!!")
-    print("8. How About Quick Pick All 6 Games")
+    print("4. Cash Pop")
+    print("5. Keno")
+    print("6. Cash 5 Double Play")
+    print("7. Pick 3")
+    print("8. Pick 4 ")
+    print("9. Can't Decide? Try Random Game!!!")
+    print("10. How About Quick Pick All 8 Games")
 
     # waiter
     while True:
         try:
-            nc_lotto_game_choice = int(input("Which Lucky Game would you like to try: "))
+            nc_lotto_game_choice = int(input("\nWhich Lucky Game would you like to try: "))
             if nc_lotto_game_choice in nc_lotto_draw_games:                        
                 result = nc_lotto_draw_games[nc_lotto_game_choice]()
 
