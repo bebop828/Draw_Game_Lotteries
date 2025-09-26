@@ -13,7 +13,7 @@ def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.randint(1, 26)
     pb_luck = f"\nPowerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = "Base ticket price $2. Drawings are held Mon. Wed. & Sat. 10:59pm ET" 
+    pb_draw = "Ticket price to play. Drawings are held Mon. Wed. & Sat." 
     pb_add = "Available Add on- Powerplay $1 extra."    
     pb_official = "Official Rules and Play can be found- https://nylottery.ny.gov/draw-game?game=powerball Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
@@ -23,7 +23,7 @@ def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
     megaball = random.randint(1, 25)
     mm_numbers_main = f"\nMega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = "Ticket price $5. Drawings are held Tues. & Fri. 11pm ET"
+    mm_drawings = "Ticket price to play $5. Drawings are held Tues. & Fri."
     mm_add = "Megaplier included with each Gameplay."
     mm_rules = "Official Rules and Play can be found- https://nylottery.ny.gov/draw-game?game=megamillions Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
@@ -33,7 +33,7 @@ def cash_4_life():
     cash_main = sorted(random.sample(range(1, 61), 5))
     cash_ball = random.randint(1, 4)
     numbers_main = f"\nCash 4 Life Lucky Numbers: {cash_main}, Cash Ball: {cash_ball}."
-    drawings_c4l = "Base ticket price $2. Drawings are held Nightly 9pm ET."      
+    drawings_c4l = "Ticket price to play $2. Drawings are held Nightly."      
     rules_c4l = "Official Rules and Play can be found- https://nylottery.ny.gov/draw-game?game=cash4life Good Luck!"    
     return (numbers_main, drawings_c4l, rules_c4l)
 
@@ -41,7 +41,7 @@ def cash_4_life():
 def ny_lotto():
     lotto_num = sorted(random.sample(range(1, 60), 6))
     lotto_main = f"\nNew York Lotto Lucky Numbers: {lotto_num}"
-    lotto_draw = "Ticket price to play $1. Drawings Wed. & Sat. 8:15pm ET"
+    lotto_draw = "Ticket price to play $1. Drawings Wed. & Sat."
     lotto_rules = "Official Rules and Play can be found- https://nylottery.ny.gov/draw-game?game=lotto Good Luck!"
     return (lotto_main, lotto_draw, lotto_rules)
 
@@ -49,7 +49,7 @@ def ny_lotto():
 def ny_p10():
     p10_num = sorted(random.sample(range(1, 81), 10))
     p10_main = f"\nNew York Pick 10 Lucky Numbers: {p10_num}"
-    p10_draw = "Ticket price to play $1. Drawings held Daily 8:30pm ET"
+    p10_draw = "Ticket price to play $1. Drawings held Daily."
     p10_rules = "Official Rules and Play can be found- https://nylottery.ny.gov/draw-game?game=pick10 Good Luck!"
     return (p10_main, p10_draw, p10_rules)
 
@@ -57,9 +57,9 @@ def ny_p10():
 def quick_draw():    
     while True:
         try:
-            print("Play up to 10 numbers per play")
+            print("\nPlay up to 10 numbers per play")
             print("Wager amounts per play from $1, $2, $3, $4, $5, or $10")
-            num_choices = int(input("How many Lucky Quick Draw numbers do you wish to play? Choose 1-10: ").strip())
+            num_choices = int(input("\nHow many Lucky Quick Draw numbers do you wish to play? Choose 1-10: ").strip())
             if num_choices < 1 or num_choices > 10:
                 print("Invalid selection. Please enter a number 1-10.")
                 continue
@@ -77,9 +77,9 @@ def quick_draw():
 
 def take_5():
     while True: 
-        print("Select a game time to play:")
-        print("1. Mid-day 2:30pm ET")
-        print("2. Evening 10:30pm ET")
+        print("\nSelect a game time to play:")
+        print("1. Mid-day")
+        print("2. Evening")
 
         try:
             choice = int(input("Make selection and enter either 1 or 2: ").strip())
@@ -100,7 +100,7 @@ def take_5():
         break
     take_num = sorted(random.sample(range(1, 40), 5))    
     take_main = f"\nTake 5 Lucky Numbers for {game_time}: {take_num}"
-    take_drawings = "Base ticket price $1. Drawings held Daily!"   
+    take_drawings = "Ticket price to play $1. Drawings held Daily!"   
     take_add = "Available add on- Instant Win $1"
     take_rules = "Official Rules and Play can be found- https://nylottery.ny.gov/draw-game?game=take5 Good Luck!"    
     return (take_main, take_drawings, take_add, take_rules)
@@ -108,9 +108,9 @@ def take_5():
 
 def win_4():
     while True: 
-        print("Select a game time to play:")
-        print("1. Mid-day 2:30pm ET")
-        print("2. Evening 10:30pm ET")
+        print("\nSelect a game time to play:")
+        print("1. Mid-day")
+        print("2. Evening")
 
         try:
             choice = int(input("Make selection and enter either 1 or 2: ").strip())
@@ -135,7 +135,7 @@ def win_4():
     set_4 = random.randint(0, 9)
     w4_main = f"\nWin 4 Lucky Numbers for {game_time}: {set_1, set_2, set_3, set_4}"
     w4_now = "Multiple ways to play and win."
-    w4_drawings = "Base ticket prices are $.50 or $1."
+    w4_drawings = "Ticket prices are $.50 or $1."
     w4_win = "Available add on- Instant Win $1."    
     w4_rules = "Official Rules and Play can be found- https://nylottery.ny.gov/draw-game?game=win4 Good Luck!"
     return (w4_main, w4_now, w4_drawings, w4_win, w4_rules)
@@ -143,9 +143,9 @@ def win_4():
 
 def numbers():
     while True: 
-        print("Select a game time to play:")
-        print("1. Mid-day 2:30pm ET")
-        print("2. Evening 10:30pm ET")
+        print("\nSelect a game time to play:")
+        print("1. Mid-day")
+        print("2. Evening")
 
         try:
             choice = int(input("Make selection and enter either 1 or 2: ").strip())
@@ -169,7 +169,7 @@ def numbers():
     set_3 = random.randint(0, 9)    
     num_main = f"\nNumbers Lucky Numbers for {game_time}: {set_1, set_2, set_3}"
     num_now = "Multiple ways to play and win."
-    num_drawings = "Base ticket prices are $.50 or $1."
+    num_drawings = "Ticket prices to are $.50 or $1."
     num_add = "Available add on- Instant Win $1."    
     num_rules = "Official Rules and Play can be found- https://nylottery.ny.gov/draw-game?game=numbers Good Luck!"
     return (num_main, num_now, num_drawings, num_add, num_rules)
