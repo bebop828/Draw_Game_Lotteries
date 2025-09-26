@@ -3,7 +3,7 @@
 ###########################################################################
 
 ###########################################################################
-# last file update- 2025/07/10
+# last file update- 2025/09/26
 # Ohio has Keno. 
 # Keno not currently included in file
 ###########################################################################
@@ -15,7 +15,7 @@ def powerball():
     pb_main = sorted(random.sample(range(1, 70), 5))
     pb_rb = random.randint(1, 26)
     pb_luck = f"\nPowerball Lucky Numbers: {pb_main}, Powerball: {pb_rb}." 
-    pb_draw = "Base ticket price $2. Drawings are held Mon. Wed. & Sat. 10:59pm ET" 
+    pb_draw = "Ticket price to play $2. Drawings are held Mon. Wed. & Sat." 
     pb_add = "Available Add on- Powerplay $1 extra."    
     pb_official = "Official Rules and Play can be found- https://www.ohiolottery.com/games/draw-games/powerball Good Luck!"    
     return (pb_luck, pb_draw, pb_add, pb_official)
@@ -25,7 +25,7 @@ def mega_millions():
     main_num = sorted(random.sample(range(1, 71), 5))
     megaball = random.randint(1, 25)
     mm_numbers_main = f"\nMega Millions Lucky Numbers: {main_num}, Mega Ball: {megaball}"
-    mm_drawings = "Ticket price $5. Drawings are held Tues. & Fri. 11pm ET"
+    mm_drawings = "Ticket price $5. Drawings are held Tues. & Fri."
     mm_add = "Megaplier included with each Gameplay."
     mm_rules = "Official Rules and Play can be found- https://www.ohiolottery.com/games/draw-games/mega-millions Good Luck!"    
     return (mm_numbers_main, mm_drawings, mm_add, mm_rules)
@@ -57,11 +57,30 @@ def roll_cash5():
     return (roll_main, roll_draw, roll_rules)
 
 
+def keno():
+    while True: 
+        try:
+            num_choices = int(input("\nHow many spots would you like to play? Choose 1-10: ").strip())
+            if num_choices < 1 or num_choices > 10:
+                print("Invalid selection. Please enter a number 1-10.")
+                continue
+            break
+        except ValueError:
+            print("Invalid input. Please enter a valid number 1-10")
+
+    spot_num = sorted(random.sample(range(1, 81), num_choices))
+    spot_main = f"\nHere are your Keno Lucky Numbers: {spot_num}"
+    spot_draw = "Ticket wager to play varies: $1-5, $10, or $20 per play!\nDrawings held Daily every few minutes!"
+    spot_add = "Available add on: BOOSTER for another $1 for each $1 wagered."
+    spot_rules = "Official Rules and Play can be found- https://www.ohiolottery.com/games/keno Good Luck!"
+    return(spot_main, spot_draw, spot_add, spot_rules)
+
+
 def pick_5():
     while True: 
-        print("Select a game time to play:")
-        print("1. Mid-day 12:29pm ET")
-        print("2. Evening 7:29pm ET")
+        print("\nSelect a game time to play:")
+        print("1. Mid-day")
+        print("2. Evening")
 
         try:
             choice = int(input("Make selection and enter either 1 or 2: ").strip())
@@ -94,9 +113,9 @@ def pick_5():
 
 def pick_4():
     while True: 
-        print("Select a game time to play:")
-        print("1. Mid-day 12:29pm ET")
-        print("2. Evening 7:29pm ET")
+        print("\nSelect a game time to play:")
+        print("1. Mid-day")
+        print("2. Evening")
 
         try:
             choice = int(input("Make selection and enter either 1 or 2: ").strip())
@@ -128,9 +147,9 @@ def pick_4():
 
 def pick_3():
     while True: 
-        print("Select a game time to play:")
-        print("1. Mid-day 12:29pm ET")
-        print("2. Evening 7:29pm ET")
+        print("\nSelect a game time to play:")
+        print("1. Mid-day")
+        print("2. Evening")
 
         try:
             choice = int(input("Make selection and enter either 1 or 2: ").strip())
@@ -207,6 +226,10 @@ def pick3_summary():
     set_3 = random.randint(0, 9)    
     return (f"Pick 3 Lucky Numbers for {game_time}: {set_1}, {set_2}, {set_3}")
 
+def keno_summary(): 
+    spot_num = random.randint(1, 80)
+    return ("Keno (Single Spot)", f"Number: {spot_num}")
+
 
 # Ohio Game Summaries
 summary_lotto_draw_games = {
@@ -215,6 +238,7 @@ summary_lotto_draw_games = {
     "Lucky for Life": lucky_for_life_summary,
     "Classic Lotto": lotto_classic_summary,
     "Rolling Cash": roll_cash5_summary,
+    "Keno": keno_summary,
     "Pick 5": pick5_summary,
     "Pick 4": pick4_summary,
     "Pick 3": pick3_summary
@@ -227,11 +251,12 @@ oh_lotto_draw_games = {
     3: lucky_for_life,
     4: lotto_classic,
     5: roll_cash5,
-    6: pick_5,
-    7: pick_4,
-    8: pick_3,
-    9: lambda: oh_lotto_draw_games[random.randint(1, 8)](),
-    10: lambda: [func() for func in summary_lotto_draw_games.values()]
+    6: keno,
+    7: pick_5,
+    8: pick_4,
+    9: pick_3,
+    10: lambda: oh_lotto_draw_games[random.randint(1, 9)](),
+    11: lambda: [func() for func in summary_lotto_draw_games.values()]
 }
 
 # print the menu
@@ -242,11 +267,12 @@ def play_game():
     print("3. Lucky for Life")
     print("4. Classic Lotto")
     print("5. Rolling Cash 5")
-    print("6. Pick 5")
-    print("7. Pick 4")        
-    print("8. Pick 3")    
-    print("9. Can't Decide? Try Random Game!!!")    
-    print("10. How About Quick Pick All 8 Games") 
+    print("6. Keno")
+    print("7. Pick 5")
+    print("8. Pick 4")        
+    print("9. Pick 3")    
+    print("10. Can't Decide? Try Random Game!!!")    
+    print("11. How About Quick Pick All 9 Games") 
     
     
     #waiter
